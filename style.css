@@ -640,7 +640,9 @@ line-height:1.8;
 
 .faq-item.active .faq-answer{
 
-max-height:250px;
+max-height:500px;
+
+padding-bottom:20px;
 
 }
 
