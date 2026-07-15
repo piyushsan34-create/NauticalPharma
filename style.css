@@ -497,3 +497,226 @@ nav{
 
 
 }
+/* ===============================
+   FINAL POLISHING
+================================*/
+
+
+html{
+scroll-behavior:smooth;
+}
+
+
+body{
+overflow-x:hidden;
+}
+
+
+/* Fade animation */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+section{
+animation:fadeUp 0.8s ease;
+}
+
+
+/* Product hover */
+
+.card{
+
+transition:0.35s ease;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+}
+
+
+/* Button animation */
+
+
+button{
+
+transition:0.3s ease;
+
+}
+
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* WhatsApp */
+
+
+.whatsapp{
+
+width:60px;
+height:60px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+animation:pulse 2s infinite;
+
+}
+
+
+@keyframes pulse{
+
+
+0%{
+transform:scale(1);
+}
+
+
+50%{
+transform:scale(1.1);
+}
+
+
+100%{
+transform:scale(1);
+}
+
+
+}
+
+
+
+/* Cart animation */
+
+
+.cart{
+
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+}
+
+
+.count{
+
+font-weight:bold;
+
+}
+
+
+
+/* Footer */
+
+
+footer{
+
+font-size:15px;
+
+}
+
+
+footer a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:768px){
+
+
+.hero h2{
+
+font-size:32px;
+
+}
+
+
+.hero p{
+
+font-size:16px;
+
+}
+
+
+.products h2{
+
+font-size:28px;
+
+}
+
+
+.card{
+
+min-width:230px;
+
+}
+
+
+header h1{
+
+font-size:22px;
+
+}
+
+
+}
+
+
+/* Page loading */
+
+body{
+
+animation:pageLoad .8s ease;
+
+}
+
+
+@keyframes pageLoad{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+
+}
