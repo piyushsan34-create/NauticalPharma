@@ -931,6 +931,68 @@ img{
 
     }
 
+}/* ===========================
+   STATS
+=========================== */
+
+.stats{
+
+background:linear-gradient(135deg,#0b6efd,#003366);
+
+padding:80px 20px;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.stat-box{
+
+background:rgba(255,255,255,.08);
+
+padding:40px 20px;
+
+border-radius:15px;
+
+backdrop-filter:blur(6px);
+
+transition:.3s;
+
+}
+
+.stat-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.stat-box h2{
+
+font-size:55px;
+
+color:#fff;
+
+margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:500;
+
 }
 
 /* ===========================
