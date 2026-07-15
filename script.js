@@ -249,3 +249,4 @@ item.classList.toggle("active");
 });
 
 });
+console.log("FAQ Items:", faqItems.length);
