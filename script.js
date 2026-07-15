@@ -317,3 +317,18 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector(".stats"));
+/* Scroll Animation */
+
+const stats = document.querySelector(".stats");
+
+const statObserver = new IntersectionObserver(entries=>{
+
+if(entries[0].isIntersecting){
+
+stats.classList.add("show");
+
+}
+
+});
+
+statObserver.observe(stats);
