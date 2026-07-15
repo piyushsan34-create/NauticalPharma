@@ -273,61 +273,47 @@ product.style.display="none";
 
 }
 /* ===========================
-   ANIMATED COUNTERS
+   COUNTER
 =========================== */
 
 const counters = document.querySelectorAll(".counter");
 
-const speed = 40;
+const observer = new IntersectionObserver(entries => {
 
-function runCounters() {
+    if(entries[0].isIntersecting){
 
-    counters.forEach(counter => {
+        counters.forEach(counter=>{
 
-        const target = +counter.getAttribute("data-target");
+            const target = +counter.dataset.target;
 
-        const update = () => {
+            let count = 0;
 
-            const count = +counter.innerText;
+            const update = ()=>{
 
-            const increment = Math.ceil(target / speed);
+                count += Math.ceil(target/80);
 
-            if (count < target) {
+                if(count < target){
 
-                counter.innerText = count + increment;
+                    counter.innerText = count;
 
-                setTimeout(update, 40);
+                    requestAnimationFrame(update);
 
-            } else {
+                }else{
 
-                counter.innerText = target + "+";
+                    counter.innerText = target + "+";
 
-            }
+                }
 
-        };
+            };
 
-        update();
+            update();
 
-    });
+        });
 
-}
+        observer.disconnect();
 
-const statsSection = document.querySelector(".stats");
+    }
 
-if (statsSection) {
+});
 
-    const observer = new IntersectionObserver((entries) => {
-
-        if (entries[0].isIntersecting) {
-
-            runCounters();
-
-            observer.disconnect();
-
-        }
-
-    }, { threshold: 0.4 });
-
-    observer.observe(statsSection);
-
-}
+observer.observe(document.querySelector(".stats"));
