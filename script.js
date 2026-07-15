@@ -272,3 +272,62 @@ product.style.display="none";
 });
 
 }
+/* ===========================
+   ANIMATED COUNTERS
+=========================== */
+
+const counters = document.querySelectorAll(".counter");
+
+const speed = 40;
+
+function runCounters() {
+
+    counters.forEach(counter => {
+
+        const target = +counter.getAttribute("data-target");
+
+        const update = () => {
+
+            const count = +counter.innerText;
+
+            const increment = Math.ceil(target / speed);
+
+            if (count < target) {
+
+                counter.innerText = count + increment;
+
+                setTimeout(update, 40);
+
+            } else {
+
+                counter.innerText = target + "+";
+
+            }
+
+        };
+
+        update();
+
+    });
+
+}
+
+const statsSection = document.querySelector(".stats");
+
+if (statsSection) {
+
+    const observer = new IntersectionObserver((entries) => {
+
+        if (entries[0].isIntersecting) {
+
+            runCounters();
+
+            observer.disconnect();
+
+        }
+
+    }, { threshold: 0.4 });
+
+    observer.observe(statsSection);
+
+}
