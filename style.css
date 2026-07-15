@@ -1,1 +1,499 @@
+/* ===============================
+   Nautical Pharma Website Style
+================================ */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7fbff;
+    color:#222;
+}
+
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#004aad;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:16px;
+}
+
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+
+
+/* HERO SECTION */
+
+.hero{
+
+    min-height:90vh;
+
+    background:
+    linear-gradient(
+    rgba(0,50,100,.65),
+    rgba(0,50,100,.65)
+    ),
+    url("https://i.ibb.co/RpL7Bwjk/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+}
+
+
+
+.hero-content{
+
+    max-width:800px;
+
+}
+
+
+.hero h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p{
+
+    font-size:22px;
+    margin-bottom:35px;
+
+}
+
+
+
+.btn{
+
+    background:#00c853;
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    background:#00a844;
+}
+
+
+
+/* SECTION TITLE */
+
+.section-title{
+
+    text-align:center;
+
+    margin:60px 0 35px;
+
+    font-size:36px;
+
+    color:#004aad;
+
+}
+
+
+
+
+/* PRODUCTS */
+
+.products{
+
+    padding:20px 7% 60px;
+
+}
+
+
+
+.product-container{
+
+    display:flex;
+
+    gap:25px;
+
+    overflow-x:auto;
+
+}
+
+
+
+.product-container::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+
+
+.product-card{
+
+    background:white;
+
+    min-width:280px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.1);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.product-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:contain;
+
+}
+
+
+
+.product-card h3{
+
+    margin:15px 0;
+
+    color:#004aad;
+
+}
+
+
+
+.price{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.add-btn{
+
+    background:#004aad;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+.add-btn:hover{
+
+    background:#00347a;
+
+}
+
+
+
+
+
+/* CART BUTTON */
+
+.cart-icon{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:100px;
+
+    width:60px;
+
+    height:60px;
+
+    background:#004aad;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+}
+
+
+
+.cart-count{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    background:red;
+
+    width:25px;
+
+    height:25px;
+
+    border-radius:50%;
+
+    font-size:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+
+/* ORDER FORM */
+
+.order-section{
+
+    padding:60px 7%;
+
+    background:#eef7ff;
+
+}
+
+
+
+.order-box{
+
+    max-width:600px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+.order-box input,
+.order-box textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+}
+
+
+.order-box button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#004aad;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+/* WHATSAPP */
+
+.whatsapp{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    background:#25D366;
+
+    color:white;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    background:#00347a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+/* MOBILE DESIGN */
+
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:column;
+
+}
+
+
+nav{
+
+    margin-top:15px;
+
+}
+
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+
+.product-card{
+
+    min-width:240px;
+
+}
+
+
+
+}
