@@ -889,16 +889,11 @@ img{
    SECTION SPACING
 =========================== */
 
-.section p{
-
+.section > .container > p{
     max-width:900px;
-
     margin:0 auto;
-
     text-align:center;
-
     color:#555;
-
 }
 
 /* ===========================
