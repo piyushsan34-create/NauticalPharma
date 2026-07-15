@@ -222,31 +222,20 @@ year.innerHTML=new Date().getFullYear();
 }
 
 console.log("Nautical Pharma Website Loaded Successfully");
-/* ===========================
-   FAQ ACCORDION
-=========================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-const faqItems = document.querySelectorAll(".faq-item");
+    const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach(item=>{
+    faqItems.forEach(item => {
 
-const question=item.querySelector(".faq-question");
+        const question = item.querySelector(".faq-question");
 
-question.addEventListener("click",()=>{
+        question.addEventListener("click", function () {
 
-faqItems.forEach(faq=>{
+            item.classList.toggle("active");
 
-if(faq!==item){
+        });
 
-faq.classList.remove("active");
-
-}
+    });
 
 });
-
-item.classList.toggle("active");
-
-});
-
-});
-console.log("FAQ Items:", faqItems.length);
