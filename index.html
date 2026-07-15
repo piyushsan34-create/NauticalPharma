@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nautical Pharma | Global Pharmaceutical Exporter</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h2>Nautical Pharma</h2>
+
+<span>Global Pharmaceutical Exporter</span>
+
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#products">Products</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<a href="#contact" class="quote-btn">
+
+Request Quote
+
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+
+Trusted Pharmaceutical Export Partner
+
+</h1>
+
+<p>
+
+High Quality Generic Medicines Delivered Worldwide
+
+</p>
+
+<a href="#products" class="shop-btn">
+
+Explore Products
+
+</a>
+
+</div>
+
+</section>
+
+<section id="products" class="products">
+
+<h2>
+
+Featured Products
+
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="https://i.ibb.co/fd6GXQ3x/iverheal-12-ivermectin-12mg-tablets-500x500.webp">
+
+<h3>Iverheal 12 mg</h3>
+
+<p>$35</p>
+
+<button onclick="addCart('Iverheal 12 mg')">
+
+Add to Cart
+
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://i.ibb.co/ycP2ndh7/anavar-oxandrolone-tablets-1000x1000.webp">
+
+<h3>Anavar Tablets</h3>
+
+<p>$70</p>
+
+<button onclick="addCart('Anavar Tablets')">
+
+Add to Cart
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<h2>About Nautical Pharma</h2>
+
+<p>
+
+Nautical Pharma is a trusted pharmaceutical exporter supplying
+high-quality medicines to importers, distributors, wholesalers,
+pharmacies and healthcare organizations across the globe.
+
+</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>
+
+Place Your Order
+
+</h2>
+
+<form onsubmit="sendOrder(); return false;">
+
+<input
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+id="phone"
+placeholder="Phone Number"
+required>
+
+<textarea
+id="order"
+placeholder="Selected Products"
+required></textarea>
+
+<button>
+
+Submit Order
+
+</button>
+
+</form>
+
+</section>
+
+<div class="cart">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="count">
+
+0
+
+</span>
+
+</div>
+
+<a class="whatsapp"
+
+href="https://wa.me/9999999999"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<footer>
+
+© 2026 Nautical Pharma. All Rights Reserved.
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
