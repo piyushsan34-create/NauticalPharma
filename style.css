@@ -1185,7 +1185,23 @@ width:100%;
     }
 
 }
+.stats{
 
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.stats.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 /* ===========================
    END OF STYLE.CSS
 =========================== */
