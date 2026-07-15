@@ -537,35 +537,118 @@ nav ul li a:hover{
 }
 
 /* ===========================
-   FAQ
+   FAQ ACCORDION
 =========================== */
 
-.faq{
+.faq-container{
 
-    max-width:900px;
+max-width:900px;
 
-    margin:auto;
-
-}
-
-.faq h3{
-
-    margin-top:25px;
-
-    color:#0b6efd;
+margin:40px auto;
 
 }
 
-.faq p{
+.faq-item{
 
-    margin-top:8px;
+background:#fff;
 
-    color:#555;
+border-radius:12px;
 
-    line-height:1.8;
+margin-bottom:18px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 }
 
+.faq-question{
+
+width:100%;
+
+padding:22px 25px;
+
+background:#fff;
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+font-size:18px;
+
+font-weight:600;
+
+color:#003366;
+
+transition:.3s;
+
+text-align:left;
+
+}
+
+.faq-question:hover{
+
+background:#f5f9ff;
+
+}
+
+.faq-question span{
+
+font-size:28px;
+
+font-weight:400;
+
+color:#0b6efd;
+
+transition:.3s;
+
+}
+
+.faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .4s ease;
+
+background:#fafcff;
+
+}
+
+.faq-answer p{
+
+padding:0 25px 22px;
+
+margin:0;
+
+text-align:left;
+
+color:#555;
+
+line-height:1.8;
+
+}
+
+.faq-item.active .faq-answer{
+
+max-height:250px;
+
+}
+
+.faq-item.active .faq-question span{
+
+transform:rotate(45deg);
+
+}
 /* ===========================
    CONTACT FORM
 =========================== */
