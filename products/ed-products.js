@@ -153,7 +153,7 @@ grid.innerHTML+=`
 
 <p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
 
-<a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" class="quote-btn" target="_blank"> Request Quote </a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header" class="quote-btn" target="_blank"> Request Quote </a>
 
 </div>
 
