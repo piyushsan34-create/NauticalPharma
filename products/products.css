@@ -1,1 +1,242 @@
+/* ==========================================
+   PRODUCTS PAGE - NAUTICAL PHARMA
+========================================== */
 
+body{
+    background:#f5f8fc;
+}
+
+/* Page Heading */
+
+.section{
+    padding:140px 0 80px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:42px;
+    color:#073b75;
+    margin-bottom:10px;
+}
+
+.section p{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* ==========================
+   TOOLBAR
+========================== */
+
+.toolbar{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.toolbar input,
+.toolbar select{
+
+    width:320px;
+    padding:15px 20px;
+
+    border:2px solid #dce7f7;
+    border-radius:50px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+.toolbar input:focus,
+.toolbar select:focus{
+
+    border-color:#0b6efd;
+    box-shadow:0 0 15px rgba(11,110,253,.2);
+
+}
+
+/* ==========================
+   PRODUCT GRID
+========================== */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+/* ==========================
+   PRODUCT CARD
+========================== */
+
+.product-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid #edf2fa;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+/* Placeholder image */
+
+.product-card img{
+
+    width:170px;
+    height:170px;
+
+    margin:0 auto 20px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    background:#fafafa;
+
+    padding:15px;
+
+}
+
+.product-card h3{
+
+    color:#073b75;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.product-card p{
+
+    color:#555;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin:8px 0;
+
+}
+
+.product-card strong{
+
+    color:#073b75;
+
+}
+
+/* ==========================
+   REQUEST BUTTON
+========================== */
+
+.quote-btn{
+
+    display:block;
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#0b6efd,#0056d2);
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(11,110,253,.35);
+
+}
+
+.quote-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(135deg,#0056d2,#003d99);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:992px){
+
+.product-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.toolbar{
+
+flex-direction:column;
+
+}
+
+.toolbar input,
+.toolbar select{
+
+width:100%;
+
+}
+
+.product-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section h2{
+
+font-size:34px;
+
+}
+
+}
