@@ -168,3 +168,23 @@ grid-template-columns:1fr;
 }
 
 }
+.quote-btn{
+
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+background:#146ef5;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.quote-btn:hover{
+
+background:#0b3d91;
+transform:translateY(-2px);
+
+}
