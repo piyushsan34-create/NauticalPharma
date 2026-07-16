@@ -57,7 +57,9 @@ const filter = document.getElementById("categoryFilter");
 
 function displayProducts(list){
 
-    grid.innerHTML = "";
+grid.innerHTML="";
+
+count.innerHTML = list.length + " Products Found";
 
     list.forEach(product => {
 
