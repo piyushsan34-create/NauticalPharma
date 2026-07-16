@@ -178,7 +178,7 @@ const filtered=products.filter(product=>{
 
 const matchName=product.name.toLowerCase().includes(keyword);
 
-const matchGeneric=generic=="" || product.generic.includes(generic);
+const matchGeneric = generic === "" || product.generic.toLowerCase().includes(generic.toLowerCase());
 
 return matchName && matchGeneric;
 
