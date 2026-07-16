@@ -129,3 +129,61 @@ manufacturer:"Sunrise Remedies"
 }
 
 ];
+const grid=document.getElementById("productGrid");
+const search=document.getElementById("searchInput");
+const filter=document.getElementById("categoryFilter");
+
+function displayProducts(list){
+
+grid.innerHTML="";
+
+list.forEach(product=>{
+
+grid.innerHTML+=`
+
+<div class="product-card">
+
+<h3>${product.name}</h3>
+
+<p><strong>Generic:</strong> ${product.generic}</p>
+
+<p><strong>Strength:</strong> ${product.strength}</p>
+
+<p><strong>Packing:</strong> ${product.packing}</p>
+
+<p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
+
+<button>Request Quote</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+displayProducts(products);
+
+search.addEventListener("keyup",filterProducts);
+filter.addEventListener("change",filterProducts);
+
+function filterProducts(){
+
+const keyword=search.value.toLowerCase();
+
+const generic=filter.value;
+
+const filtered=products.filter(product=>{
+
+const matchName=product.name.toLowerCase().includes(keyword);
+
+const matchGeneric=generic=="" || product.generic.includes(generic);
+
+return matchName && matchGeneric;
+
+});
+
+displayProducts(filtered);
+
+}
