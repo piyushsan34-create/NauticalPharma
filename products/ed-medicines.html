@@ -10,35 +10,26 @@
 <link rel="stylesheet" href="../style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
 <header>
+    <div class="container navbar">
 
-<div class="container navbar">
+        <div class="logo">
+            <a href="../index.html">Nautical Pharma</a>
+        </div>
 
-<div class="logo">
-<a href="../index.html">Nautical Pharma</a>
-</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#categories">Categories</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-<nav>
-
-<ul>
-
-<li><a href="../index.html">Home</a></li>
-
-<li><a href="../index.html#categories">Categories</a></li>
-
-<li><a href="../index.html#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
+    </div>
 </header>
 
 <section class="section" style="padding-top:140px;">
@@ -47,49 +38,37 @@
 
 <h2>ED Medicines</h2>
 
-<p>
+<p style="margin-bottom:30px;">
 Browse our complete range of Erectile Dysfunction medicines.
 </p>
 
-<div class="search-box">
-
-<input type="text"
-id="searchInput"
-placeholder="Search ED Medicines...">
-<script src="products.js"></script>
-<script src="../script.js"></script>
-</div>
-
 <div class="toolbar">
 
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Search ED Medicines...">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search ED Medicines...">
 
-<select id="categoryFilter">
-
-<option value="">All Generics</option>
-<option>Sildenafil</option>
-<option>Tadalafil</option>
-<option>Vardenafil</option>
-<option>Avanafil</option>
-
-</select>
+    <select id="categoryFilter">
+        <option value="">All Generics</option>
+        <option>Sildenafil</option>
+        <option>Tadalafil</option>
+        <option>Vardenafil</option>
+        <option>Avanafil</option>
+    </select>
 
 </div>
 
 <div class="product-grid" id="productGrid">
 
 </div>
-</div>
 
 </div>
 
 </section>
 
+<script src="products.js"></script>
 <script src="../script.js"></script>
 
 </body>
-
 </html>
