@@ -52,20 +52,45 @@
 =========================== */
 
 .quote-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 28px;
-    background:#146ef5;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    margin-top:22px;
+    padding:14px 30px;
+
+    background:linear-gradient(135deg,#0b6efd,#0056d2);
     color:#fff;
     text-decoration:none;
-    border-radius:30px;
+
+    border-radius:50px;
+    font-size:15px;
     font-weight:600;
-    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(11,110,253,.30);
+
+    transition:all .35s ease;
+}
+
+.quote-btn::before{
+    content:"📩";
+    font-size:16px;
 }
 
 .quote-btn:hover{
-    background:#0b3d91;
-    transform:translateY(-2px);
+
+    transform:translateY(-4px) scale(1.03);
+
+    background:linear-gradient(135deg,#0056d2,#003f9f);
+
+    box-shadow:0 15px 30px rgba(0,86,210,.45);
+}
+
+.quote-btn:active{
+
+    transform:scale(.98);
+
 }
 
 /* ===========================
