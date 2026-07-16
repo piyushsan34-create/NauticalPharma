@@ -4,9 +4,10 @@
 
 body{
     background:#f5f8fc;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Page Heading */
+/* Heading */
 
 .section{
     padding:140px 0 80px;
@@ -15,7 +16,7 @@ body{
 .section h2{
     text-align:center;
     font-size:42px;
-    color:#073b75;
+    color:#0b3d91;
     margin-bottom:10px;
 }
 
@@ -25,17 +26,17 @@ body{
     margin-bottom:40px;
 }
 
-/* ==========================
-   TOOLBAR
-========================== */
+/* ===========================
+   SEARCH & FILTER
+=========================== */
 
 .toolbar{
     display:flex;
-    gap:20px;
     justify-content:center;
     align-items:center;
+    gap:20px;
     flex-wrap:wrap;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
 
 .toolbar input,
@@ -44,7 +45,7 @@ body{
     width:320px;
     padding:15px 20px;
 
-    border:2px solid #dce7f7;
+    border:2px solid #d9e7ff;
     border-radius:50px;
 
     font-size:16px;
@@ -61,27 +62,28 @@ body{
 .toolbar select:focus{
 
     border-color:#0b6efd;
-    box-shadow:0 0 15px rgba(11,110,253,.2);
+
+    box-shadow:0 0 20px rgba(11,110,253,.2);
 
 }
 
-/* ==========================
+/* ===========================
    PRODUCT GRID
-========================== */
+=========================== */
 
 .product-grid{
 
-    display:grid;
+    display:grid !important;
 
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
 
     gap:30px;
 
 }
 
-/* ==========================
+/* ===========================
    PRODUCT CARD
-========================== */
+=========================== */
 
 .product-card{
 
@@ -91,13 +93,15 @@ body{
 
     padding:30px;
 
-    text-align:center;
+    border:1px solid #e8eef7;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 
     transition:.35s;
 
-    border:1px solid #edf2fa;
+    display:flex;
+
+    flex-direction:column;
 
 }
 
@@ -109,24 +113,21 @@ body{
 
 }
 
-/* Placeholder image */
+/* IMAGE */
 
 .product-card img{
 
-    width:170px;
-    height:170px;
+    width:180px;
 
-    margin:0 auto 20px;
+    height:180px;
 
     object-fit:contain;
 
-    border-radius:12px;
-
-    background:#fafafa;
-
-    padding:15px;
+    margin:0 auto 20px;
 
 }
+
+/* TITLE */
 
 .product-card h3{
 
@@ -134,55 +135,59 @@ body{
 
     font-size:24px;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
+
+    text-align:center;
 
 }
 
+/* TEXT */
+
 .product-card p{
+
+    margin:8px 0;
 
     color:#555;
 
     font-size:15px;
 
-    line-height:1.8;
-
-    margin:8px 0;
+    line-height:1.7;
 
 }
 
 .product-card strong{
 
-    color:#073b75;
+    color:#0b3d91;
 
 }
 
-/* ==========================
-   REQUEST BUTTON
-========================== */
+/* BUTTON */
 
 .quote-btn{
 
-    display:block;
+    display:flex;
 
-    width:100%;
+    justify-content:center;
 
-    margin-top:25px;
+    align-items:center;
+
+    margin-top:auto;
 
     padding:15px;
+
+    background:#0b6efd;
+
+    color:#fff !important;
 
     border-radius:50px;
 
     text-decoration:none;
 
-    font-weight:600;
-
     font-size:16px;
 
-    color:#fff;
+    font-weight:600;
 
-    background:linear-gradient(135deg,#0b6efd,#0056d2);
-
-    transition:.35s;
+    transition:.3s;
 
     box-shadow:0 12px 25px rgba(11,110,253,.35);
 
@@ -190,17 +195,17 @@ body{
 
 .quote-btn:hover{
 
-    transform:translateY(-5px);
+    background:#0056d2;
 
-    background:linear-gradient(135deg,#0056d2,#003d99);
+    transform:translateY(-3px);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    box-shadow:0 18px 35px rgba(11,110,253,.45);
 
 }
 
-/* ==========================
-   MOBILE
-========================== */
+/* ===========================
+   RESPONSIVE
+=========================== */
 
 @media(max-width:992px){
 
