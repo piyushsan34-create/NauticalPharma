@@ -59,56 +59,13 @@ Browse our complete range of Erectile Dysfunction medicines.
 
 </div>
 
-<div class="product-grid" id="productGrid">
+<div class="product-grid" id="productGrid"></div>
 
 </div>
-
-</div>
-
 </section>
 
 <script src="ed-products.js"></script>
 <script src="../script.js"></script>
-<script>
 
-const grid = document.getElementById("productGrid");
-
-function displayProducts(){
-
-grid.innerHTML = "";
-
-products.forEach(product => {
-
-grid.innerHTML += `
-
-<div class="product-card">
-
-<img src="${product.image}" alt="${product.name}">
-
-<h3>${product.name}</h3>
-
-<p><b>Generic:</b> ${product.generic}</p>
-
-<p><b>Strength:</b> ${product.strength}</p>
-
-<p><b>Packing:</b> ${product.packing}</p>
-
-<p><b>Manufacturer:</b> ${product.manufacturer}</p>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header" class="quote-btn" target="_blank">
-Request Quote
-</a>
-
-</div>
-
-`;
-
-});
-
-}
-
-displayProducts();
-
-</script>
 </body>
 </html>
