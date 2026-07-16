@@ -51,6 +51,7 @@ manufacturer:"Sunrise Remedies"
 ];
 
 const grid = document.getElementById("productGrid");
+const count = document.getElementById("productCount");
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 
