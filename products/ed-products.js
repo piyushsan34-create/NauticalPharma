@@ -179,9 +179,9 @@ Request Quote
 }
 /* Add click event to accordions */
 
-document.querySelectorAll(".accordion-header").forEach(header=>{
+document.querySelectorAll(".accordion-header").forEach(header => {
 
-    header.addEventListener("click",()=>{
+    header.addEventListener("click", () => {
 
         header.parentElement.classList.toggle("active");
 
@@ -189,6 +189,7 @@ document.querySelectorAll(".accordion-header").forEach(header=>{
 
 });
 
+/* Don't open any accordion automatically */
 
 displayProducts(products);
 
