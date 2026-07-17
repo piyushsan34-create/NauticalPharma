@@ -57,37 +57,63 @@ const filter = document.getElementById("categoryFilter");
 
 function displayProducts(list){
 
-grid.innerHTML="";
+const container = document.getElementById("productContainer");
 
-count.innerHTML = list.length + " Products Found";
+container.innerHTML = "";
 
-    list.forEach(product => {
+const groups = {};
 
-        grid.innerHTML += `
-        <div class="product-card">
+list.forEach(product=>{
 
-            <h3>${product.name}</h3>
+    if(!groups[product.generic]){
+        groups[product.generic] = [];
+    }
 
-            <p><strong>Generic:</strong> ${product.generic}</p>
+    groups[product.generic].push(product);
 
-            <p><strong>Strength:</strong> ${product.strength}</p>
+});
 
-            <p><strong>Packing:</strong> ${product.packing}</p>
+for(const generic in groups){
 
-            <p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
+container.innerHTML += `
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
-               class="quote-btn"
-               target="_blank">
+<div class="medicine-section">
 
-               Request Quote
+<h2>${generic}</h2>
 
-            </a>
+<div class="product-grid">
 
-        </div>
-        `;
+${groups[generic].map(product=>`
 
-    });
+<div class="product-card">
+
+<h3>${product.name}</h3>
+
+<p><strong>Strength:</strong> ${product.strength}</p>
+
+<p><strong>Packing:</strong> ${product.packing}</p>
+
+<p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
+class="quote-btn"
+target="_blank">
+
+Request Quote
+
+</a>
+
+</div>
+
+`).join("")}
+
+</div>
+
+</div>
+
+`;
+
+}
 
 }
 
