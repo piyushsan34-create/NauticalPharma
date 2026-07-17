@@ -196,16 +196,22 @@ filter.addEventListener("change", filterProducts);
 
 function filterProducts(){
 
-    const keyword = search.value.toLowerCase();
-
+    const keyword = search.value.toLowerCase().trim();
     const generic = filter.value.toLowerCase();
 
     const filtered = products.filter(product => {
 
-        return (
-            product.name.toLowerCase().includes(keyword) &&
-            (generic === "" || product.generic.toLowerCase().includes(generic))
-        );
+        const matchesSearch =
+            product.name.toLowerCase().includes(keyword) ||
+            product.generic.toLowerCase().includes(keyword) ||
+            product.manufacturer.toLowerCase().includes(keyword) ||
+            product.strength.toLowerCase().includes(keyword);
+
+        const matchesGeneric =
+            generic === "" ||
+            product.generic.toLowerCase().includes(generic);
+
+        return matchesSearch && matchesGeneric;
 
     });
 
