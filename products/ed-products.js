@@ -123,27 +123,21 @@ const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 const count = document.getElementById("productCount");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const pageInfo = document.getElementById("pageInfo");
 
-let currentPage = 1;
-const productsPerPage = 20;
-let filteredProducts = [...products];
-
-function displayCurrentPage();
+function displayProducts(list){
 
     const container = document.getElementById("productContainer");
 
     container.innerHTML = "";
-   count.textContent = `${list.length} Products Found`;
+
+    count.textContent = `${list.length} Products Found`;
 
     const groups = {};
 
-    list.forEach(product => {
+    list.forEach(product=>{
 
         if(!groups[product.generic]){
-            groups[product.generic] = [];
+            groups[product.generic]=[];
         }
 
         groups[product.generic].push(product);
@@ -156,22 +150,22 @@ function displayCurrentPage();
 
         <div class="accordion">
 
-           <div class="accordion-header">
+            <div class="accordion-header">
 
-    <div class="accordion-title">
-        ${generic}
-        <span class="count">(${groups[generic].length} Products)</span>
-    </div>
+                <div class="accordion-title">
+                    ${generic}
+                    <span class="count">(${groups[generic].length} Products)</span>
+                </div>
 
-    <div class="accordion-icon">▼</div>
+                <div class="accordion-icon">▼</div>
 
-</div>
+            </div>
 
             <div class="accordion-content">
 
                 <div class="product-grid">
 
-                    ${groups[generic].map(product => `
+                    ${groups[generic].map(product=>`
 
                     <div class="product-card">
 
@@ -186,9 +180,7 @@ function displayCurrentPage();
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
                         class="quote-btn"
                         target="_blank">
-
                         Request Quote
-
                         </a>
 
                     </div>
@@ -205,11 +197,9 @@ function displayCurrentPage();
 
     }
 
-    // Accordion Click
+    document.querySelectorAll(".accordion-header").forEach(header=>{
 
-    document.querySelectorAll(".accordion-header").forEach(header => {
-
-        header.addEventListener("click", () => {
+        header.addEventListener("click",()=>{
 
             header.parentElement.classList.toggle("active");
 
@@ -221,27 +211,9 @@ function displayCurrentPage();
 
 displayProducts(products);
 
-search.addEventListener("keyup", filterProducts);
-filter.addEventListener("change", filterProducts);
-manufacturer.addEventListener("change", filterProducts);
-
-function displayCurrentPage(){
-
-    const start = (currentPage - 1) * productsPerPage;
-    const end = start + productsPerPage;
-
-    const pageProducts = filteredProducts.slice(start, end);
-
-    displayProducts(pageProducts);
-
-    const totalPages = Math.ceil(filteredProducts.length / productsPerPage) || 1;
-
-    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
-
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage === totalPages;
-
-}
+search.addEventListener("keyup",filterProducts);
+filter.addEventListener("change",filterProducts);
+manufacturer.addEventListener("change",filterProducts);
 
 function filterProducts(){
 
@@ -249,54 +221,25 @@ function filterProducts(){
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = products.filter(product => {
+    const filtered = products.filter(product=>{
 
-        const matchesSearch =
+        const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
             product.generic.toLowerCase().includes(keyword) ||
             product.manufacturer.toLowerCase().includes(keyword);
 
-        const matchesGeneric =
+        const matchGeneric =
             generic === "" ||
             product.generic.toLowerCase().includes(generic);
 
-        const matchesManufacturer =
+        const matchManufacturer =
             company === "" ||
             product.manufacturer.toLowerCase() === company;
 
-        return matchesSearch && matchesGeneric && matchesManufacturer;
+        return matchSearch && matchGeneric && matchManufacturer;
 
     });
 
-    filteredProducts = filtered;
-
-currentPage = 1;
-
-displayCurrentPage();
+    displayProducts(filtered);
 
 }
-prevBtn.addEventListener("click", () => {
-
-    if(currentPage > 1){
-
-        currentPage--;
-
-        displayCurrentPage();
-
-    }
-
-});
-
-nextBtn.addEventListener("click", () => {
-
-    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-
-    if(currentPage < totalPages){
-
-        currentPage++;
-
-        displayCurrentPage();
-
-    }
-
-});
