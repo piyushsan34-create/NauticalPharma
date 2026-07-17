@@ -99,7 +99,7 @@ const products = [
    Udenafil
 =========================== */
 
-{name:"Zudena 100",generic:"Udenafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"}
+{name:"Zudena 100",generic:"Udenafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"},
    
 /* ===========================
    ED Combination Products
