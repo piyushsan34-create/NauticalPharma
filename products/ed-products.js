@@ -121,6 +121,7 @@ const products = [
 ];
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
+const manufacturer = document.getElementById("manufacturerFilter");
 const count = document.getElementById("productCount");
 
 function displayProducts(list){
