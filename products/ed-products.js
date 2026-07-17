@@ -102,6 +102,23 @@ const products = [
 {name:"Zudena 100",generic:"Udenafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"}
 
 ];
+/* ===========================
+   ED Combination Products
+=========================== */
+
+{name:"Super P Force",generic:"Sildenafil + Dapoxetine",strength:"100 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Extra Super P Force",generic:"Sildenafil + Dapoxetine",strength:"200 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Super Kamagra",generic:"Sildenafil + Dapoxetine",strength:"100 mg + 60 mg",packing:"4 x 4 Tablets",manufacturer:"Ajanta Pharma"},
+{name:"Super Fildena",generic:"Sildenafil + Dapoxetine",strength:"100 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Super Cenforce",generic:"Sildenafil + Dapoxetine",strength:"100 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+
+{name:"Super Vidalista",generic:"Tadalafil + Dapoxetine",strength:"20 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Super Tadarise",generic:"Tadalafil + Dapoxetine",strength:"20 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Tadapox",generic:"Tadalafil + Dapoxetine",strength:"20 mg + 60 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+
+{name:"Sildalist",generic:"Sildenafil + Tadalafil",strength:"100 mg + 20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Silvitra",generic:"Sildenafil + Vardenafil",strength:"100 mg + 20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Tadacip",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"}
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const count = document.getElementById("productCount");
