@@ -129,13 +129,16 @@ function displayProducts(list){
 
         <div class="accordion">
 
-            <div class="accordion-header">
+           <div class="accordion-header">
 
-                <span>${generic}</span>
+    <div class="accordion-title">
+        ${generic}
+        <span class="count">(${groups[generic].length} Products)</span>
+    </div>
 
-                <span class="count">${groups[generic].length} Products</span>
+    <div class="accordion-icon">▼</div>
 
-            </div>
+</div>
 
             <div class="accordion-content">
 
