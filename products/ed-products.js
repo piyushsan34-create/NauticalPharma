@@ -123,8 +123,15 @@ const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 const count = document.getElementById("productCount");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const pageInfo = document.getElementById("pageInfo");
 
-function displayProducts(list){
+let currentPage = 1;
+const productsPerPage = 20;
+let filteredProducts = [...products];
+
+function displayCurrentPage();
 
     const container = document.getElementById("productContainer");
 
@@ -218,6 +225,24 @@ search.addEventListener("keyup", filterProducts);
 filter.addEventListener("change", filterProducts);
 manufacturer.addEventListener("change", filterProducts);
 
+function displayCurrentPage(){
+
+    const start = (currentPage - 1) * productsPerPage;
+    const end = start + productsPerPage;
+
+    const pageProducts = filteredProducts.slice(start, end);
+
+    displayProducts(pageProducts);
+
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage) || 1;
+
+    pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+
+}
+
 function filterProducts(){
 
     const keyword = search.value.toLowerCase().trim();
@@ -243,6 +268,35 @@ function filterProducts(){
 
     });
 
-    displayProducts(filtered);
+    filteredProducts = filtered;
+
+currentPage = 1;
+
+displayCurrentPage();
 
 }
+prevBtn.addEventListener("click", () => {
+
+    if(currentPage > 1){
+
+        currentPage--;
+
+        displayCurrentPage();
+
+    }
+
+});
+
+nextBtn.addEventListener("click", () => {
+
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+    if(currentPage < totalPages){
+
+        currentPage++;
+
+        displayCurrentPage();
+
+    }
+
+});
