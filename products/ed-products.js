@@ -102,94 +102,92 @@ const products = [
 {name:"Zudena 100",generic:"Udenafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"}
 
 ];
-
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 
 function displayProducts(list){
 
-const container=document.getElementById("productContainer");
+    const container = document.getElementById("productContainer");
 
-container.innerHTML="";
+    container.innerHTML = "";
 
-const groups={};
+    const groups = {};
 
-list.forEach(product=>{
+    list.forEach(product => {
 
-if(!groups[product.generic]){
-groups[product.generic]=[];
-}
+        if(!groups[product.generic]){
+            groups[product.generic] = [];
+        }
 
-groups[product.generic].push(product);
-
-});
-
-for(const generic in groups){
-
-container.innerHTML+=`
-
-<div class="accordion">
-
-<div class="accordion-header">
-
-<span>${generic}</span>
-
-<span class="count">${groups[generic].length} Products</span>
-
-</div>
-
-<div class="accordion-content">
-
-<div class="product-grid">
-
-${groups[generic].map(product=>`
-
-<div class="product-card">
-
-<h3>${product.name}</h3>
-
-<p><strong>Strength:</strong> ${product.strength}</p>
-
-<p><strong>Packing:</strong> ${product.packing}</p>
-
-<p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
-
-class="quote-btn"
-
-target="_blank">
-
-Request Quote
-
-</a>
-
-</div>
-
-`).join("")}
-
-</div>
-
-</div>
-
-</div>
-
-`;
-
-}
-/* Add click event to accordions */
-
-document.querySelectorAll(".accordion-header").forEach(header => {
-
-    header.addEventListener("click", () => {
-
-        header.parentElement.classList.toggle("active");
+        groups[product.generic].push(product);
 
     });
 
-});
+    for(const generic in groups){
 
-/* Don't open any accordion automatically */
+        container.innerHTML += `
+
+        <div class="accordion">
+
+            <div class="accordion-header">
+
+                <span>${generic}</span>
+
+                <span class="count">${groups[generic].length} Products</span>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <div class="product-grid">
+
+                    ${groups[generic].map(product => `
+
+                    <div class="product-card">
+
+                        <h3>${product.name}</h3>
+
+                        <p><strong>Strength:</strong> ${product.strength}</p>
+
+                        <p><strong>Packing:</strong> ${product.packing}</p>
+
+                        <p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
+
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
+                        class="quote-btn"
+                        target="_blank">
+
+                        Request Quote
+
+                        </a>
+
+                    </div>
+
+                    `).join("")}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+    }
+
+    // Accordion Click
+
+    document.querySelectorAll(".accordion-header").forEach(header => {
+
+        header.addEventListener("click", () => {
+
+            header.parentElement.classList.toggle("active");
+
+        });
+
+    });
+
+}
 
 displayProducts(products);
 
@@ -199,6 +197,7 @@ filter.addEventListener("change", filterProducts);
 function filterProducts(){
 
     const keyword = search.value.toLowerCase();
+
     const generic = filter.value.toLowerCase();
 
     const filtered = products.filter(product => {
