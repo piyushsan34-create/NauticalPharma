@@ -122,6 +122,17 @@ const products = [
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
+// Populate manufacturer dropdown automatically
+const manufacturers = [...new Set(products.map(product => product.manufacturer))].sort();
+
+manufacturers.forEach(company => {
+
+    const option = document.createElement("option");
+    option.value = company;
+    option.textContent = company;
+    manufacturer.appendChild(option);
+
+});
 const count = document.getElementById("productCount");
 
 function displayProducts(list){
