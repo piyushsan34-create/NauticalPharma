@@ -222,20 +222,24 @@ function filterProducts(){
 
     const keyword = search.value.toLowerCase().trim();
     const generic = filter.value.toLowerCase();
+    const company = manufacturer.value.toLowerCase();
 
     const filtered = products.filter(product => {
 
         const matchesSearch =
             product.name.toLowerCase().includes(keyword) ||
             product.generic.toLowerCase().includes(keyword) ||
-            product.manufacturer.toLowerCase().includes(keyword) ||
-            product.strength.toLowerCase().includes(keyword);
+            product.manufacturer.toLowerCase().includes(keyword);
 
         const matchesGeneric =
             generic === "" ||
             product.generic.toLowerCase().includes(generic);
 
-        return matchesSearch && matchesGeneric;
+        const matchesManufacturer =
+            company === "" ||
+            product.manufacturer.toLowerCase() === company;
+
+        return matchesSearch && matchesGeneric && matchesManufacturer;
 
     });
 
