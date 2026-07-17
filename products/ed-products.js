@@ -100,8 +100,7 @@ const products = [
 =========================== */
 
 {name:"Zudena 100",generic:"Udenafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"}
-
-];
+   
 /* ===========================
    ED Combination Products
 =========================== */
@@ -119,6 +118,7 @@ const products = [
 {name:"Sildalist",generic:"Sildenafil + Tadalafil",strength:"100 mg + 20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
 {name:"Silvitra",generic:"Sildenafil + Vardenafil",strength:"100 mg + 20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
 {name:"Tadacip",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"};
+];
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const count = document.getElementById("productCount");
