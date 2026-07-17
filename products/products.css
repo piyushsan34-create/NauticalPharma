@@ -284,3 +284,86 @@ color:#0b3d91;
 text-align:left;
 
 }
+/* ===========================
+   ACCORDION
+=========================== */
+
+.accordion{
+
+background:#fff;
+
+margin-bottom:25px;
+
+border-radius:16px;
+
+overflow:hidden;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.accordion-header{
+
+padding:22px 30px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+cursor:pointer;
+
+background:#0b6efd;
+
+color:#fff;
+
+font-size:22px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.accordion-header:hover{
+
+background:#0056d2;
+
+}
+
+.count{
+
+font-size:15px;
+
+background:#fff;
+
+color:#0b6efd;
+
+padding:6px 15px;
+
+border-radius:30px;
+
+font-weight:600;
+
+}
+
+.accordion-content{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .5s ease;
+
+background:#f9fbff;
+
+}
+
+.accordion.active .accordion-content{
+
+max-height:6000px;
+
+padding:30px;
+
+}
