@@ -57,29 +57,37 @@ const filter = document.getElementById("categoryFilter");
 
 function displayProducts(list){
 
-const container = document.getElementById("productContainer");
+const container=document.getElementById("productContainer");
 
-container.innerHTML = "";
+container.innerHTML="";
 
-const groups = {};
+const groups={};
 
 list.forEach(product=>{
 
-    if(!groups[product.generic]){
-        groups[product.generic] = [];
-    }
+if(!groups[product.generic]){
+groups[product.generic]=[];
+}
 
-    groups[product.generic].push(product);
+groups[product.generic].push(product);
 
 });
 
 for(const generic in groups){
 
-container.innerHTML += `
+container.innerHTML+=`
 
-<div class="medicine-section">
+<div class="accordion">
 
-<h2>${generic}</h2>
+<div class="accordion-header">
+
+<span>${generic}</span>
+
+<span class="count">${groups[generic].length} Products</span>
+
+</div>
+
+<div class="accordion-content">
 
 <div class="product-grid">
 
@@ -96,7 +104,9 @@ ${groups[generic].map(product=>`
 <p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
+
 class="quote-btn"
+
 target="_blank">
 
 Request Quote
@@ -111,9 +121,21 @@ Request Quote
 
 </div>
 
+</div>
+
 `;
 
 }
+
+document.querySelectorAll(".accordion-header").forEach(header=>{
+
+header.addEventListener("click",()=>{
+
+header.parentElement.classList.toggle("active");
+
+});
+
+});
 
 }
 
