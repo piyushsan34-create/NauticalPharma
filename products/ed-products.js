@@ -104,12 +104,14 @@ const products = [
 ];
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
+const count = document.getElementById("productCount");
 
 function displayProducts(list){
 
     const container = document.getElementById("productContainer");
 
     container.innerHTML = "";
+   count.textContent = `${list.length} Products Found`;
 
     const groups = {};
 
