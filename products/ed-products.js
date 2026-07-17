@@ -50,8 +50,6 @@ manufacturer:"Sunrise Remedies"
 }
 ];
 
-const grid = document.getElementById("productGrid");
-const count = document.getElementById("productCount");
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 
@@ -126,16 +124,25 @@ Request Quote
 `;
 
 }
+/* Add click event to accordions */
 
 document.querySelectorAll(".accordion-header").forEach(header=>{
 
-header.addEventListener("click",()=>{
+    header.addEventListener("click",()=>{
 
-header.parentElement.classList.toggle("active");
+        header.parentElement.classList.toggle("active");
+
+    });
 
 });
 
-});
+/* Open first accordion automatically */
+
+const first = document.querySelector(".accordion");
+
+if(first){
+    first.classList.add("active");
+}
 
 }
 
