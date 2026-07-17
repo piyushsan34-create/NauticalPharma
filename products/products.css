@@ -449,3 +449,81 @@ padding:30px;
     display:block;
 
 }
+/* ==========================================
+   PRODUCT POPUP
+========================================== */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    background:#fff;
+    width:100%;
+    max-width:550px;
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+    animation:popup .25s ease;
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+@keyframes popup{
+
+from{
+    opacity:0;
+    transform:translateY(30px) scale(.95);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+}
+
+.close-modal{
+    position:absolute;
+    top:18px;
+    right:22px;
+    font-size:30px;
+    cursor:pointer;
+    color:#777;
+    transition:.3s;
+}
+
+.close-modal:hover{
+    color:#0b6efd;
+}
+
+.modal-box h2{
+    color:#073b75;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+.modal-details p{
+    margin:15px 0;
+    font-size:17px;
+    color:#444;
+}
+
+.modal-details strong{
+    color:#073b75;
+}
+
+.modal .quote-btn{
+    margin-top:30px;
+    width:100%;
+}
