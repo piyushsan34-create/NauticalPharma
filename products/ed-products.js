@@ -216,6 +216,7 @@ displayProducts(products);
 
 search.addEventListener("keyup", filterProducts);
 filter.addEventListener("change", filterProducts);
+manufacturer.addEventListener("change", filterProducts);
 
 function filterProducts(){
 
