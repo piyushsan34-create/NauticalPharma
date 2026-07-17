@@ -261,3 +261,26 @@ font-size:34px;
     font-size:22px;
     font-weight:600;
 }
+/* Generic Sections */
+
+.medicine-section{
+
+margin-bottom:70px;
+
+}
+
+.medicine-section h2{
+
+font-size:34px;
+
+margin-bottom:30px;
+
+padding-bottom:12px;
+
+border-bottom:3px solid #0b6efd;
+
+color:#0b3d91;
+
+text-align:left;
+
+}
