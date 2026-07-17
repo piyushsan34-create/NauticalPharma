@@ -1,53 +1,106 @@
 const products = [
-{
-name:"Cenforce 25",
-generic:"Sildenafil Citrate",
-strength:"25 mg",
-packing:"10 x 10 Tablets",
-manufacturer:"Centurion Laboratories"
-},
-{
-name:"Cenforce 50",
-generic:"Sildenafil Citrate",
-strength:"50 mg",
-packing:"10 x 10 Tablets",
-manufacturer:"Centurion Laboratories"
-},
-{
-name:"Cenforce 100",
-generic:"Sildenafil Citrate",
-strength:"100 mg",
-packing:"10 x 10 Tablets",
-manufacturer:"Centurion Laboratories"
-},
-{
-name:"Kamagra Gold 100",
-generic:"Sildenafil Citrate",
-strength:"100 mg",
-packing:"10 x 10 Tablets",
-manufacturer:"Ajanta Pharma"
-},
-{
-name:"Vidalista 20",
-generic:"Tadalafil",
-strength:"20 mg",
-packing:"10 x 10 Tablets",
-manufacturer:"Centurion Laboratories"
-},
-{
-name:"Vilitra 20",
-generic:"Vardenafil",
-strength:"20 mg",
-packing:"10 x 10 Tablets",
-manufacturer:"Centurion Laboratories"
-},
-{
-name:"Avana 100",
-generic:"Avanafil",
-strength:"100 mg",
-packing:"4 x 4 Tablets",
-manufacturer:"Sunrise Remedies"
-}
+
+/* ===========================
+   Sildenafil Citrate
+=========================== */
+
+{name:"Cenforce 25",generic:"Sildenafil Citrate",strength:"25 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce 50",generic:"Sildenafil Citrate",strength:"50 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce 120",generic:"Sildenafil Citrate",strength:"120 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce 130",generic:"Sildenafil Citrate",strength:"130 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce 150",generic:"Sildenafil Citrate",strength:"150 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce 200",generic:"Sildenafil Citrate",strength:"200 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce FM",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce Soft",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Cenforce Professional",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+
+{name:"Kamagra Gold",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Ajanta Pharma"},
+{name:"Kamagra CT",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Ajanta Pharma"},
+{name:"Kamagra Polo",generic:"Sildenafil Citrate",strength:"100 mg",packing:"4 x 7 Tablets",manufacturer:"Ajanta Pharma"},
+{name:"Kamagra Oral Jelly",generic:"Sildenafil Citrate",strength:"100 mg",packing:"7 Sachets",manufacturer:"Ajanta Pharma"},
+{name:"Kamagra Export",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Ajanta Pharma"},
+
+{name:"Suhagra 25",generic:"Sildenafil Citrate",strength:"25 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"},
+{name:"Suhagra 50",generic:"Sildenafil Citrate",strength:"50 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"},
+{name:"Suhagra 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"},
+
+{name:"Malegra 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Malegra 200",generic:"Sildenafil Citrate",strength:"200 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+
+{name:"Silditop 50",generic:"Sildenafil Citrate",strength:"50 mg",packing:"10 x 10 Tablets",manufacturer:"Healing Pharma"},
+{name:"Silditop 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Healing Pharma"},
+
+{name:"Aurogra 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Aurochem"},
+{name:"Zenegra 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Alkem Laboratories"},
+{name:"Penegra 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Zydus Healthcare"},
+
+{name:"Fildena 50",generic:"Sildenafil Citrate",strength:"50 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Fildena 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Fildena Strong",generic:"Sildenafil Citrate",strength:"120 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+
+{name:"Leeforce 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Leeford"},
+{name:"Vigore 50",generic:"Sildenafil Citrate",strength:"50 mg",packing:"10 x 10 Tablets",manufacturer:"German Remedies"},
+{name:"Vigore 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"German Remedies"},
+{name:"Lovegra 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"Ajanta Pharma"},
+{name:"Vega 100",generic:"Sildenafil Citrate",strength:"100 mg",packing:"10 x 10 Tablets",manufacturer:"HAB Pharma"},
+
+/* ===========================
+   Tadalafil
+=========================== */
+
+{name:"Vidalista 2.5",generic:"Tadalafil",strength:"2.5 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista 5",generic:"Tadalafil",strength:"5 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista 10",generic:"Tadalafil",strength:"10 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista 20",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista 40",generic:"Tadalafil",strength:"40 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista 60",generic:"Tadalafil",strength:"60 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista 80",generic:"Tadalafil",strength:"80 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista Professional",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vidalista CT",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+
+{name:"Tadalista 5",generic:"Tadalafil",strength:"5 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Tadalista 10",generic:"Tadalafil",strength:"10 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Tadalista 20",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Tadalista 40",generic:"Tadalafil",strength:"40 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Tadalista 60",generic:"Tadalafil",strength:"60 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Tadalista Pro",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Tadalista Super Active",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Capsules",manufacturer:"Fortune Healthcare"},
+
+{name:"Tadalee 20",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Tadalee 40",generic:"Tadalafil",strength:"40 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Tadalee 60",generic:"Tadalafil",strength:"60 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+
+{name:"Cialis",generic:"Tadalafil",strength:"20 mg",packing:"1 x 4 Tablets",manufacturer:"Lilly"},
+
+/* ===========================
+   Vardenafil
+=========================== */
+
+{name:"Vilitra 10",generic:"Vardenafil",strength:"10 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vilitra 20",generic:"Vardenafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vilitra 40",generic:"Vardenafil",strength:"40 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vilitra 60",generic:"Vardenafil",strength:"60 mg",packing:"10 x 10 Tablets",manufacturer:"Centurion Laboratories"},
+{name:"Vitara V 20",generic:"Vardenafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Signature"},
+{name:"Filitra Professional",generic:"Vardenafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Fortune Healthcare"},
+{name:"Zhewitra 20",generic:"Vardenafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Zhewitra 40",generic:"Vardenafil",strength:"40 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
+
+/* ===========================
+   Avanafil
+=========================== */
+
+{name:"Avana 50",generic:"Avanafil",strength:"50 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Avana 100",generic:"Avanafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Avana 200",generic:"Avanafil",strength:"200 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"},
+{name:"Avaforce 100",generic:"Avanafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Centurion Laboratories"},
+
+/* ===========================
+   Udenafil
+=========================== */
+
+{name:"Zudena 100",generic:"Udenafil",strength:"100 mg",packing:"4 x 4 Tablets",manufacturer:"Sunrise Remedies"}
+
 ];
 
 const search = document.getElementById("searchInput");
