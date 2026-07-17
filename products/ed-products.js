@@ -189,15 +189,6 @@ document.querySelectorAll(".accordion-header").forEach(header=>{
 
 });
 
-/* Open first accordion automatically */
-
-const first = document.querySelector(".accordion");
-
-if(first){
-    first.classList.add("active");
-}
-
-}
 
 displayProducts(products);
 
