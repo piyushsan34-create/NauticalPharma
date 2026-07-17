@@ -178,7 +178,13 @@ function displayProducts(list){
 
                     ${groups[generic].map(product=>`
 
-                    <div class="product-card">
+                    <div class="product-card" onclick="openProduct(
+'${product.name}',
+'${product.generic}',
+'${product.strength}',
+'${product.packing}',
+'${product.manufacturer}'
+)">
 
                         <h3>${product.name}</h3>
 
@@ -252,5 +258,36 @@ function filterProducts(){
     });
 
     displayProducts(filtered);
+
+}
+// ===============================
+// PRODUCT POPUP
+// ===============================
+
+function openProduct(name,generic,strength,packing,manufacturer){
+
+    document.getElementById("modalName").textContent = name;
+    document.getElementById("modalGeneric").textContent = generic;
+    document.getElementById("modalStrength").textContent = strength;
+    document.getElementById("modalPacking").textContent = packing;
+    document.getElementById("modalManufacturer").textContent = manufacturer;
+
+    document.getElementById("productModal").classList.add("show");
+
+}
+
+document.querySelector(".close-modal").onclick = function(){
+
+    document.getElementById("productModal").classList.remove("show");
+
+}
+
+window.onclick = function(e){
+
+    if(e.target.id==="productModal"){
+
+        document.getElementById("productModal").classList.remove("show");
+
+    }
 
 }
