@@ -223,7 +223,6 @@ const groups = {};
         });
 
     });
-`;
 } // <-- closes displayProducts()
 
 function filterProducts(){
