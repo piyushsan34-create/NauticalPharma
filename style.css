@@ -1011,86 +1011,6 @@ width:100%;
 
 }
 /* ===========================
-   MOBILE DESIGN
-=========================== */
-
-@media (max-width:768px){
-.menu-toggle{
-    display:block;
-}
-.navbar{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:14px 18px;
-
-}
-
-.logo{
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-}
-
-.logo img{
-
-    width:58px;
-    height:58px;
-
-}
-
-.logo-text h2{
-
-    font-size:16px;
-
-}
-
-.menu-toggle{
-    display:none;
-    font-size:36px;
-    cursor:pointer;
-    color:#0b2f6b;
-}
-
-nav{
-
-    position:absolute;
-    top:88px;
-    left:0;
-    width:100%;
-    background:#fff;
-
-    display:none;
-
-}
-
-nav.active{
-
-    display:block;
-
-}
-
-nav ul{
-
-    display:flex;
-    flex-direction:column;
-    padding:15px 0;
-
-}
-
-nav ul li{
-
-    text-align:center;
-    padding:14px;
-
-}
-
-}
-/* ===========================
    TABLET
 =========================== */
 
@@ -1161,14 +1081,11 @@ nav ul li{
 @media(max-width:480px){
 
     nav ul{
-
         flex-direction:column;
-
         align-items:center;
-
     }
 
-   @media(max-width:768px){
+}
 
 .hero{
     height:580px;
