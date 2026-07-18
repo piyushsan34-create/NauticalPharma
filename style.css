@@ -1026,97 +1026,78 @@ width:100%;
 
 @media (max-width:768px){
 
-header{
-    padding:0;
-}
-
 .navbar{
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 20px;
+
+    padding:14px 18px;
+
 }
 
 .logo{
+
     display:flex;
     align-items:center;
+    gap:10px;
+
 }
 
 .logo img{
-    width:170px;
-    height:auto;
+
+    width:58px;
+    height:58px;
+
+}
+
+.logo-text h2{
+
+    font-size:16px;
+
 }
 
 .menu-toggle{
+
     display:block;
-    font-size:34px;
-    color:#0a3472;
+    font-size:38px;
+    color:#0b2f6b;
     cursor:pointer;
+
 }
 
 nav{
-    display:none;
+
     position:absolute;
-    top:78px;
+    top:88px;
     left:0;
     width:100%;
     background:#fff;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    display:none;
+
 }
 
 nav.active{
+
     display:block;
+
 }
 
 nav ul{
+
     display:flex;
     flex-direction:column;
     padding:15px 0;
+
 }
 
 nav ul li{
+
     text-align:center;
-    padding:14px 0;
-}
-
-.hero{
-    height:560px;
-    margin-top:78px;
-}
-
-.hero-content{
-
-    width:90%;
-    margin:auto;
-
-    align-items:flex-start;
-    text-align:left;
+    padding:14px;
 
 }
-
-.hero-content h1{
-
-    font-size:44px;
-    line-height:1.15;
-    margin-bottom:18px;
-    color:#fff;
-
-}
-
-.hero-content p{
-
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:28px;
-
-}
-
-.btn{
-
-    width:100%;
-    max-width:330px;
-    text-align:center;
-    margin:10px 0;
 
 }
 /* ===========================
@@ -1197,24 +1178,46 @@ nav ul li{
 
     }
 
-    .hero{
+   @media (max-width:768px){
 
-        height:75vh;
+.hero{
 
-    }
+    height:520px;
+    margin-top:88px;
 
-    .hero-content h1{
+}
 
-        font-size:28px;
+.hero-content{
 
-    }
+    width:90%;
+    text-align:left;
+    align-items:flex-start;
 
-    .hero-content p{
+}
 
-        font-size:15px;
+.hero-content h1{
 
-    }
+    font-size:42px;
+    line-height:1.15;
+    color:#fff;
 
+}
+
+.hero-content p{
+
+    font-size:18px;
+    line-height:1.6;
+
+}
+
+.btn{
+
+    width:260px;
+    margin:10px 0;
+
+}
+
+}
     .category-grid{
 
         grid-template-columns:1fr;
