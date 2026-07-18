@@ -255,20 +255,20 @@ nav ul li a:hover{
 }
 .hero-content h1{
     font-size:56px;
+    font-weight:700;
     line-height:1.1;
     margin-bottom:25px;
+    color:#ffffff;
+    text-shadow:0 3px 10px rgba(0,0,0,0.35);
 }
 
-.hero-content p{
-
+..hero-content p{
     font-size:22px;
-
-    margin-bottom:35px;
-
-    color:#f1f1f1;
-
+    color:#ffffff;
     max-width:750px;
-
+    margin-bottom:35px;
+    line-height:1.6;
+    text-shadow:0 2px 8px rgba(0,0,0,0.35);
 }
 
 /* ===========================
