@@ -73,9 +73,10 @@ h2{
 
 header{
 .logo img{
-    height:70px;
-    width:auto;
-    display:block;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
 }
    
     top:0;
