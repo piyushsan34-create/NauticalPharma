@@ -100,7 +100,10 @@ nav{
     height:auto;
     display:block;
 }
-
+.logo{
+    display:flex;
+    align-items:center;
+}
 .logo-text{
     display:flex;
     flex-direction:column;
@@ -1116,12 +1119,6 @@ width:100%;
 =========================== */
 
 @media(max-width:480px){
-
-    .logo{
-
-        font-size:22px;
-
-    }
 
     nav ul{
 
