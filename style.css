@@ -1171,45 +1171,49 @@ nav ul li{
    @media(max-width:768px){
 
 .hero{
-
-    height:520px;
-
+    height:580px;
+    margin-top:80px;
 }
 
 .hero-content{
-
+    display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:flex-start;
 
-}
+    height:100%;
 
+    padding:80px 30px 40px;
+    text-align:left;
+}
 .hero-content h1{
+    font-size:48px;
+    line-height:1.1;
+    font-weight:700;
+    color:#fff;
 
-    font-size:42px;
-
+    margin:0 0 20px;
 }
-
 .hero-content p{
-
     font-size:18px;
+    line-height:1.7;
+    color:#fff;
 
+    margin-bottom:30px;
+
+    max-width:340px;
 }
-
 .hero-buttons{
-
+    display:flex;
     flex-direction:column;
-    width:100%;
-
+    gap:15px;
 }
 
 .hero-buttons .btn{
-
-    width:260px;
-
+    width:280px;
+    text-align:center;
 }
-
-}
-    .category-grid{
+      .category-grid{
 
         grid-template-columns:1fr;
 
