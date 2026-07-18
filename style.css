@@ -69,76 +69,45 @@ h2{
 /* ===========================
    HEADER
 =========================== */
-}
 
 header{
-.logo img{
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    display: block;
-}
-   
+    position:fixed;
     top:0;
-
     left:0;
-
     width:100%;
-
-    background:#ffffff;
-
+    background:#fff;
     box-shadow:0 2px 15px rgba(0,0,0,.08);
-
     z-index:1000;
-
 }
 
 .navbar{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:18px 0;
-
 }
 
-.logo{
-
-    font-size:28px;
-
-    font-weight:700;
-
-    color:#0b6efd;
-
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    display:block;
 }
 
 nav ul{
-
     display:flex;
-
     list-style:none;
-
     gap:30px;
-
 }
 
 nav ul li a{
-
     font-weight:500;
-
     transition:.3s;
-
 }
 
 nav ul li a:hover{
-
     color:#0b6efd;
-
 }
-
 /* ===========================
    BUTTONS
 =========================== */
