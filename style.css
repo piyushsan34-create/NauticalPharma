@@ -69,7 +69,11 @@ h2{
 /* ===========================
    HEADER
 =========================== */
-
+.logo img{
+    height:70px;
+    width:auto;
+    display:block;
+}
 header{
 
     position:fixed;
