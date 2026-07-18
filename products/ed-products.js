@@ -247,26 +247,22 @@ Next ▶
 
 </div>
 `;
-   
-displayProducts(products);
+} // <-- closes displayProducts()
 
-search.addEventListener("keyup",filterProducts);
-filter.addEventListener("change",filterProducts);
-manufacturer.addEventListener("change",filterProducts);
-
-function filterProducts(){
 function changePage(page){
 
     currentPage = page;
-
     filterProducts();
 
 }
+
+function filterProducts(){
+
     const keyword = search.value.toLowerCase().trim();
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = products.filter(product=>{
+    const filtered = products.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -284,9 +280,11 @@ function changePage(page){
         return matchSearch && matchGeneric && matchManufacturer;
 
     });
-if(currentPage > Math.ceil(filtered.length / PRODUCTS_PER_PAGE)){
-    currentPage = 1;
-}
+
+    if(currentPage > Math.ceil(filtered.length / PRODUCTS_PER_PAGE)){
+        currentPage = 1;
+    }
+
     displayProducts(filtered);
 
 }
@@ -319,5 +317,13 @@ window.onclick = function(e){
         document.getElementById("productModal").classList.remove("show");
 
     }
+};
+// ===============================
+// INITIALIZE PAGE
+// ===============================
 
-}
+displayProducts(products);
+
+search.addEventListener("keyup", filterProducts);
+filter.addEventListener("change", filterProducts);
+manufacturer.addEventListener("change", filterProducts);
