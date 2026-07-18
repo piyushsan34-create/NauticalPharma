@@ -134,8 +134,6 @@ manufacturers.forEach(company => {
 
 });
 const count = document.getElementById("productCount");
-const PRODUCTS_PER_PAGE = 12;
-let currentPage = 1;
 
 function displayProducts(list){
 
@@ -145,14 +143,9 @@ function displayProducts(list){
 
     count.textContent = `${list.length} Products Found`;
 
-    const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
-const end = start + PRODUCTS_PER_PAGE;
-
-const pageProducts = list.slice(start, end);
-
 const groups = {};
-
-    pageProducts.forEach(product=>{
+   
+    list.forEach(product=>{
 
         if(!groups[product.generic]){
             groups[product.generic]=[];
@@ -230,31 +223,8 @@ const groups = {};
         });
 
     });
-const totalPages = Math.ceil(list.length / PRODUCTS_PER_PAGE);
-
-container.innerHTML += `
-<div class="pagination">
-
-<button ${currentPage===1 ? "disabled" : ""} onclick="changePage(${currentPage-1})">
-◀ Previous
-</button>
-
-<span>Page ${currentPage} of ${totalPages}</span>
-
-<button ${currentPage===totalPages ? "disabled" : ""} onclick="changePage(${currentPage+1})">
-Next ▶
-</button>
-
-</div>
 `;
 } // <-- closes displayProducts()
-
-function changePage(page){
-
-    currentPage = page;
-    filterProducts();
-
-}
 
 function filterProducts(){
 
@@ -280,10 +250,6 @@ function filterProducts(){
         return matchSearch && matchGeneric && matchManufacturer;
 
     });
-
-    if(currentPage > Math.ceil(filtered.length / PRODUCTS_PER_PAGE)){
-        currentPage = 1;
-    }
 
     displayProducts(filtered);
 
