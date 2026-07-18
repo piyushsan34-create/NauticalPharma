@@ -96,8 +96,9 @@ nav{
 }
 
 .logo img{
-    width:75px;
-    height:75px;
+    width:70px;
+    height:auto;
+    display:block;
 }
 
 .logo-text{
