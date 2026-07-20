@@ -119,6 +119,7 @@ const products = [
 {name:"Silvitra",generic:"Sildenafil + Vardenafil",strength:"100 mg + 20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
 {name:"Tadacip",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"}
 ];
+window.edProducts = products;
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
