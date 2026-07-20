@@ -1,12 +1,11 @@
-/* ===========================
+/* ==================================================
    GOOGLE FONT
-=========================== */
+================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ===========================
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* ==================================================
    RESET
-=========================== */
+================================================== */
 
 *{
     margin:0;
@@ -23,11 +22,25 @@ body{
     background:#f8fbff;
     color:#333;
     line-height:1.7;
+    overflow-x:hidden;
 }
 
-/* ===========================
-   CONTAINER
-=========================== */
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+/* ==================================================
+   GLOBAL
+================================================== */
 
 .container{
     width:90%;
@@ -35,37 +48,77 @@ body{
     margin:auto;
 }
 
-/* ===========================
-   LINKS
-=========================== */
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-/* ===========================
-   SECTION
-=========================== */
-
 .section{
-    padding:80px 0;
+    padding:90px 0;
 }
 
 .light{
-    background:#ffffff;
+    background:#fff;
 }
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
 
-h1,h2,h3{
+h1,
+h2,
+h3{
     color:#003366;
+    font-weight:700;
 }
 
 h2{
-    font-size:38px;
+    font-size:42px;
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:25px;
 }
 
+.section p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#666;
+}
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 36px;
+
+    border-radius:40px;
+
+    background:#0b6efd;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#0056d2;
+
+    transform:translateY(-3px);
+
+}
+
+.secondary{
+
+    background:#28a745;
+
+}
+
+.secondary:hover{
+
+    background:#1f8b39;
+
+}
 /* ===========================
    HEADER
 =========================== */
@@ -89,13 +142,9 @@ header{
 nav{
     margin-left:auto;
 }
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-/* LOGO */
+/* ===========================
+   LOGO
+=========================== */
 
 .logo{
     display:flex;
@@ -112,6 +161,7 @@ nav{
 .logo-text{
     display:flex;
     flex-direction:column;
+    justify-content:center;
     line-height:.9;
 }
 
@@ -120,26 +170,6 @@ nav{
     font-size:18px;
     font-weight:800;
     color:#0b2f6b;
-}
-.logo{
-    display:flex;
-    align-items:center;
-}
-.logo-text{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    line-height:.82;
-}
-
-.logo-text span{
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight:900;
-    font-size:34px;
-    color:#0a2f6b;
-    letter-spacing:-1px;
-    margin:0;
-    padding:0;
 }
 nav ul{
     display:flex;
@@ -155,50 +185,6 @@ nav ul li a{
 nav ul li a:hover{
     color:#0b6efd;
 }
-/* ===========================
-   BUTTONS
-=========================== */
-
-.btn{
-
-    display:inline-block;
-
-    padding:14px 34px;
-
-    background:#0b6efd;
-
-    color:#fff;
-
-    border-radius:40px;
-
-    transition:.3s;
-
-    font-weight:600;
-
-    margin:8px;
-
-}
-
-.btn:hover{
-
-    background:#0056d2;
-
-    transform:translateY(-3px);
-
-}
-
-.secondary{
-
-    background:#28a745;
-
-}
-
-.secondary:hover{
-
-    background:#1f8b39;
-
-}
-
 /* ===========================
    HERO
 =========================== */
@@ -840,19 +826,6 @@ footer a:hover{
     transform:scale(1.1);
 
 }
-
-/* ===========================
-   IMAGE STYLING
-=========================== */
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-}
-
 /* ===========================
    SCROLLBAR
 =========================== */
@@ -925,261 +898,153 @@ img{
     }
 
 }
+
 /* ===========================
    STATS
 =========================== */
 
 .stats{
-
     background:#0b6efd;
-
     padding:70px 0;
+    opacity:0;
+    transform:translateY(80px);
+    transition:1s;
+}
 
+.stats.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .stats-grid{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     flex-wrap:nowrap;
-
     gap:30px;
-
 }
 
 .stat{
-
     flex:1;
-
     text-align:center;
-
     color:#fff;
-
 }
 
 .stat h2{
-
     font-size:55px;
-
     color:#fff;
-
     margin-bottom:10px;
-
     font-weight:700;
-
 }
 
 .stat span{
-
     font-size:18px;
-
     color:#fff;
-
     letter-spacing:.5px;
-
 }
-
-/* Mobile */
 
 @media(max-width:768px){
 
-.stats-grid{
+    .stats-grid{
+        flex-wrap:wrap;
+    }
 
-flex-wrap:wrap;
-
-}
-
-.stat{
-
-width:50%;
-
-margin-bottom:30px;
-
-}
+    .stat{
+        width:50%;
+        margin-bottom:30px;
+    }
 
 }
 
 @media(max-width:480px){
 
-.stat{
-width:100%;
-}
+    .stat{
+        width:100%;
+    }
 
 }
 /* ===========================
-   TABLET
+   MOBILE (768px)
 =========================== */
 
-@media(max-width:768px){
-
-    h2{
-
-        font-size:30px;
-
-    }
+@media (max-width:768px){
 
     .hero{
+        height:580px;
+        margin-top:80px;
+    }
 
-        height:85vh;
-
+    .hero-content{
+        height:100%;
+        padding:80px 30px 40px;
+        justify-content:center;
+        align-items:flex-start;
+        text-align:left;
     }
 
     .hero-content h1{
-
-        font-size:34px;
-
-        line-height:1.3;
-
+        font-size:42px;
+        line-height:1.2;
+        margin-bottom:20px;
     }
 
     .hero-content p{
-
-        font-size:17px;
-
+        font-size:18px;
+        max-width:340px;
+        line-height:1.7;
     }
 
-    .btn{
-
-        display:block;
-
-        width:220px;
-
-        margin:12px auto;
-
-        text-align:center;
-
+    .hero-buttons{
+        flex-direction:column;
+        gap:15px;
     }
 
-    .product-grid{
-
-        grid-template-columns:1fr;
-
+    .hero-buttons .btn{
+        width:260px;
     }
 
     .category-grid{
-
-        grid-template-columns:1fr 1fr;
-
+        grid-template-columns:1fr;
     }
 
-    form{
-
-        padding:25px;
-
+    .features{
+        grid-template-columns:1fr;
     }
 
+    footer{
+        padding:40px 15px;
+    }
+
+    .whatsapp{
+        width:58px;
+        height:58px;
+        font-size:28px;
+        right:18px;
+        bottom:18px;
+    }
 }
 
-/* ===========================
-   MOBILE
-=========================== */
-
-@media(max-width:480px){
+@media (max-width:480px){
 
     nav ul{
         flex-direction:column;
         align-items:center;
     }
 
-}
-
-/* MOBILE MENU */
-@media (max-width:768px){
-
-.hero{
-    height:580px;
-    margin-top:80px;
-}
-
-.hero-content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:flex-start;
-    height:100%;
-    padding:80px 30px 40px;
-    text-align:left;
-}
-
-.hero-content h1{
-    font-size:48px;
-    line-height:1.1;
-    color:#fff;
-    margin-bottom:20px;
-}
-
-.hero-content p{
-    font-size:18px;
-    color:#fff;
-    max-width:340px;
-}
-
-.hero-buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.hero-buttons .btn{
-    width:260px;
-}
-
-}
-
-.category-grid{
-
-        grid-template-columns:1fr;
-
+    .hero-content h1{
+        font-size:34px;
     }
 
-    .features{
-
-        grid-template-columns:1fr;
-
+    .hero-content p{
+        font-size:16px;
     }
 
-    footer{
-
-        padding:40px 15px;
-
+    .hero-buttons .btn{
+        width:100%;
+        max-width:260px;
     }
-
-    .whatsapp{
-
-        width:58px;
-
-        height:58px;
-
-        font-size:28px;
-
-        right:18px;
-
-        bottom:18px;
-
-    }
-
-}
-.stats{
-
-opacity:0;
-
-transform:translateY(80px);
-
-transition:1s;
-
 }
 
-.stats.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
 /* ===========================
    MOBILE MENU
 =========================== */
@@ -1190,52 +1055,54 @@ transform:translateY(0);
     cursor:pointer;
     color:#003366;
 }
-
 @media(max-width:768px){
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
 
-.menu-toggle{
-    display:block;
-}
+    .menu-toggle{
+        display:block;
+    }
 
-nav{
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:#fff;
-    display:none;
-    box-shadow:0 10px 20px rgba(0,0,0,.1);
-}
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#fff;
+        display:none;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
+    }
 
-nav.active{
-    display:block;
-}
+    nav.active{
+        display:block;
+    }
 
-nav ul{
-    flex-direction:column;
-    padding:20px;
-    gap:20px;
-}
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+    }
 
-nav ul li{
-    text-align:center;
-}
+    nav ul li{
+        text-align:center;
+    }
 
-.logo img{
-    width:60px;
-}
+    .logo img{
+        width:60px;
+    }
 
-.logo-text h2{
-    font-size:28px;
+    .logo-text h2{
+    margin:0;
+    font-size:18px;
+    font-weight:800;
+    color:#0b2f6b;
 }
-
 }
 /* ===========================
    END OF STYLE.CSS
 =========================== */
+
