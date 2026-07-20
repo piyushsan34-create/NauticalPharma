@@ -344,3 +344,18 @@ menuToggle.addEventListener("click",()=>{
     navbar.classList.toggle("active");
 
 });
+
+// Auto display ED medicine count
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (window.edProducts) {
+
+        const count = document.getElementById("edCount");
+
+        if (count) {
+            count.textContent = `${window.edProducts.length} Products`;
+        }
+
+    }
+
+});
