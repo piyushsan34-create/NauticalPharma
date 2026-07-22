@@ -1,26 +1,19 @@
-const allProducts = [
+const allProducts = [];
 
-{
-    category: "ED Medicines",
-    name: "Cenforce 100",
-    generic: "Sildenafil Citrate",
-    page: "products/ed-medicines.html?product=Cenforce%20100"
-},
+// Import all ED products
+if (window.edProducts) {
 
-{
-    category: "ED Medicines",
-    name: "Vidalista 20",
-    generic: "Tadalafil",
-    page: "products/ed-medicines.html?product=Vidalista%2020"
-},
+    window.edProducts.forEach(product => {
 
-{
-    category: "ED Medicines",
-    name: "Kamagra Gold",
-    generic: "Sildenafil Citrate",
-    page: "products/ed-medicines.html?product=Kamagra%20Gold"
+        allProducts.push({
+            category: "ED Medicines",
+            name: product.name,
+            generic: product.generic,
+            page: `products/ed-medicines.html?product=${encodeURIComponent(product.name)}`
+        });
+
+    });
+
 }
-
-];
 
 window.allProducts = allProducts;
