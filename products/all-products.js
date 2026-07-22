@@ -1,1 +1,1 @@
-
+const allProducts = [];
