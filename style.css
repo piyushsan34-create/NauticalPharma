@@ -1042,7 +1042,56 @@ footer a:hover{
         max-width:260px;
     }
 }
+/* ===========================
+   SEARCH RESULTS
+=========================== */
 
+.search-box{
+    position:relative;
+}
+
+.search-results{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    margin-top:10px;
+    overflow:hidden;
+    display:none;
+    z-index:999;
+    max-height:400px;
+    overflow-y:auto;
+}
+
+.search-item{
+    display:block;
+    padding:15px 20px;
+    border-bottom:1px solid #eee;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.search-item:last-child{
+    border-bottom:none;
+}
+
+.search-item:hover{
+    background:#f5f9ff;
+}
+
+.search-item strong{
+    display:block;
+    color:#0b3d91;
+    font-size:16px;
+}
+
+.search-item span{
+    color:#666;
+    font-size:14px;
+}
 /* ===========================
    MOBILE MENU
 =========================== */
