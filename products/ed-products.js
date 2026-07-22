@@ -179,7 +179,9 @@ const groups = {};
 
                     ${groups[generic].map(product=>`
 
-                    <div class="product-card" onclick="openProduct(
+                    <div class="product-card"
+     id="${product.name.toLowerCase().replace(/\s+/g,'-')}"
+     onclick="openProduct(
 '${product.name}',
 '${product.generic}',
 '${product.strength}',
