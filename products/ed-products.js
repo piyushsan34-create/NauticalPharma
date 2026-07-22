@@ -287,6 +287,57 @@ window.onclick = function(e){
     }
 };
 // ===============================
+// AUTO OPEN SEARCHED PRODUCT
+// ===============================
+
+const params = new URLSearchParams(window.location.search);
+const searchedProduct = params.get("product");
+
+if (searchedProduct) {
+
+    filter.value = "";
+    manufacturer.value = "";
+    search.value = searchedProduct;
+
+    filterProducts();
+
+    setTimeout(() => {
+
+        const id = searchedProduct
+            .toLowerCase()
+            .replace(/\s+/g, "-");
+
+        const card = document.getElementById(id);
+
+        if (card) {
+
+            // Open accordion
+            const accordion = card.closest(".accordion");
+            accordion.classList.add("active");
+
+            // Scroll to product
+            card.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            // Highlight product
+            card.style.border = "3px solid #0077ff";
+            card.style.boxShadow = "0 0 25px rgba(0,119,255,.5)";
+            card.style.background = "#eef7ff";
+
+            setTimeout(() => {
+                card.style.border = "";
+                card.style.boxShadow = "";
+                card.style.background = "";
+            }, 5000);
+
+        }
+
+    }, 300);
+
+}
+// ===============================
 // INITIALIZE PAGE
 // ===============================
 
