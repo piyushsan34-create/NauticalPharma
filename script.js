@@ -345,9 +345,6 @@ menuToggle.addEventListener("click",()=>{
 
 });
 
-<script src="products/all-products.js"></script>
-<script src="script.js"></script>
-
 // Auto display ED medicine count
 document.addEventListener("DOMContentLoaded", () => {
 
