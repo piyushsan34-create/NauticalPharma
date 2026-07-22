@@ -359,3 +359,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+/* ===========================
+   GLOBAL PRODUCT SEARCH
+=========================== */
+
+const searchBox = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+if (searchBox && searchResults) {
+
+    searchBox.addEventListener("input", function () {
+
+        const value = this.value.toLowerCase().trim();
+
+        searchResults.innerHTML = "";
+
+        if (value.length === 0) {
+            searchResults.style.display = "none";
+            return;
+        }
+
+        const matches = window.allProducts.filter(product =>
+            product.name.toLowerCase().includes(value) ||
+            product.generic.toLowerCase().includes(value)
+        );
+
+        if (matches.length === 0) {
+            searchResults.innerHTML = "<div class='result-item'>No products found</div>";
+        } else {
+
+            matches.forEach(product => {
+
+                searchResults.innerHTML += `
+                    <a href="${product.page}" class="result-item">
+                        <strong>${product.name}</strong><br>
+                        <small>${product.generic}</small>
+                    </a>
+                `;
+
+            });
+
+        }
+
+        searchResults.style.display = "block";
+
+    });
+
+}
