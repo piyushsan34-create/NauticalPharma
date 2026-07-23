@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Weight Loss Medicines | Nautical Pharma</title>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="products.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <div class="logo">
+    <a href="../index.html">
+        <img src="../images/logo.png" alt="Nautical Pharma">
+    </a>
+
+    <div class="logo-text">
+        <h2>NAUTICAL<br>PHARMA</h2>
+    </div>
+</div>
+        <nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../index.html#products">Products</a></li>
+        <li><a href="../index.html#quality">Quality</a></li>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+    </div>
+</header>
+
+<section class="section" style="padding-top:140px;">
+
+<div class="container">
+
+<h2>Weight Loss Medicines</h2>
+
+<p style="margin-bottom:30px;">
+  Browse our complete range of Weight Loss medicines and injections.
+</p>
+
+<div class="toolbar">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search ED Medicines...">
+
+    <select id="categoryFilter">
+        <option value="">All Generics</option>
+        <option>Sildenafil</option>
+        <option>Tadalafil</option>
+        <option>Vardenafil</option>
+        <option>Avanafil</option>
+        <option>Udenafil</option>
+        <option>Sildenafil + Dapoxetine</option>
+        <option>Tadalafil + Dapoxetine</option>
+        <option>Sildenafil + Tadalafil</option>
+        <option>Sildenafil + Vardenafil</option>
+    </select>
+
+    <select id="manufacturerFilter">
+    <option value="">All Manufacturers</option>
+</select>
+</div>
+<div class="results-bar">
+    <h3 id="productCount">0 Products Found</h3>
+</div>
+
+<div id="productContainer"></div>
+<!-- Product Popup -->
+
+<div id="productModal" class="modal">
+
+    <div class="modal-box">
+
+        <span class="close-modal">&times;</span>
+
+        <h2 id="modalName"></h2>
+
+        <div class="modal-details">
+
+            <p><strong>Generic:</strong> <span id="modalGeneric"></span></p>
+
+            <p><strong>Strength:</strong> <span id="modalStrength"></span></p>
+
+            <p><strong>Packing:</strong> <span id="modalPacking"></span></p>
+
+            <p><strong>Manufacturer:</strong> <span id="modalManufacturer"></span></p>
+
+        </div>
+
+        <a
+        id="quoteLink"
+        class="quote-btn"
+        target="_blank"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header">
+
+        Request Quote
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+<script src="weight-products.js"></script>
+<script src="../script.js"></script>
+  
+</body>
+</html>
