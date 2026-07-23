@@ -123,3 +123,38 @@
   
 </body>
 </html>
+function displayProducts(list) {
+
+    container.innerHTML = "";
+
+    count.textContent = `${list.length} Products Found`;
+
+    list.forEach(product => {
+
+        container.innerHTML += `
+            <div class="product-card">
+
+                <h3>${product.name}</h3>
+
+                <p><strong>Generic:</strong> ${product.generic}</p>
+
+                <p><strong>Strength:</strong> ${product.strength}</p>
+
+                <p><strong>Packing:</strong> ${product.packing}</p>
+
+                <p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfMsIqbKJQlSclhLTOwSiU7SaShe-y_R9y6r875sU-gO9jkg/viewform?usp=header"
+                   class="quote-btn"
+                   target="_blank">
+                    Request Quote
+                </a>
+
+            </div>
+        `;
+
+    });
+
+}
+
+displayProducts(products);
