@@ -15,6 +15,21 @@ if (window.edProducts) {
     });
 
 }
+// Import all weight loss products
+if (window.weightProducts) {
+
+    window.weightProducts.forEach(product => {
+
+        allProducts.push({
+            category: "Weight Loss",
+            name: product.name,
+            generic: product.generic,
+            page: `products/weight-loss.html?product=${encodeURIComponent(product.name)}`
+        });
+
+    });
+
+}
 
 window.allProducts = allProducts;
 
