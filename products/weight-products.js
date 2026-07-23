@@ -33,3 +33,30 @@ const products = [
 }
 
 ];
+window.weightProducts = products;
+
+const search = document.getElementById("searchInput");
+const filter = document.getElementById("categoryFilter");
+const manufacturer = document.getElementById("manufacturerFilter");
+const count = document.getElementById("productCount");
+const container = document.getElementById("productContainer");
+
+// Populate Generic dropdown
+const generics = [...new Set(products.map(p => p.generic))].sort();
+
+generics.forEach(generic => {
+    const option = document.createElement("option");
+    option.value = generic;
+    option.textContent = generic;
+    filter.appendChild(option);
+});
+
+// Populate Manufacturer dropdown
+const manufacturers = [...new Set(products.map(p => p.manufacturer))].sort();
+
+manufacturers.forEach(company => {
+    const option = document.createElement("option");
+    option.value = company;
+    option.textContent = company;
+    manufacturer.appendChild(option);
+});
