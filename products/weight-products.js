@@ -307,7 +307,7 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayProducts(products);
+displayProducts(window.weightProducts);
 
 search.addEventListener("keyup", filterProducts);
 filter.addEventListener("change", filterProducts);
