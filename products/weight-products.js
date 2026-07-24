@@ -1,4 +1,4 @@
-const products = [
+window.weightProducts = [
 {
     name: "Mounjaro",
     generic: "Tirzepatide Injection",
