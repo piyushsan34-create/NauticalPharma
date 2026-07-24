@@ -72,7 +72,7 @@ window.weightProducts = [
 }
 
 ];
-window.weightProducts = products;
+
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
