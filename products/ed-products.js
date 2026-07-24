@@ -1,5 +1,6 @@
 const products = [
-
+];
+const products = window.edProducts;
 /* ===========================
    Sildenafil Citrate
 =========================== */
@@ -123,6 +124,18 @@ window.edProducts = products;
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
+
+// Populate Generic dropdown automatically
+const generics = [...new Set(products.map(product => product.generic))].sort();
+
+generics.forEach(generic => {
+
+    const option = document.createElement("option");
+    option.value = generic;
+    option.textContent = generic;
+    filter.appendChild(option);
+
+});
 // Populate manufacturer dropdown automatically
 const manufacturers = [...new Set(products.map(product => product.manufacturer))].sort();
 
