@@ -72,6 +72,7 @@ window.weightProducts = [
 }
 
 ];
+const products = window.weightProducts;
 
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
