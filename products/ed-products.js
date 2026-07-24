@@ -1,4 +1,4 @@
-const products = [
+window.edProducts = [
 /* ===========================
    Sildenafil Citrate
 =========================== */
@@ -119,6 +119,7 @@ const products = [
 {name:"Tadacip",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"}
 ];
 const products = window.edProducts;
+
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
