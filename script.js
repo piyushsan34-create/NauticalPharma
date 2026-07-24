@@ -345,17 +345,19 @@ menuToggle.addEventListener("click",()=>{
 
 });
 
-// Auto display ED medicine count
+// Auto display category counts
 document.addEventListener("DOMContentLoaded", () => {
 
-    if (window.edProducts) {
+    const edCount = document.getElementById("edCount");
 
-        const count = document.getElementById("edCount");
+    if (edCount && window.edProducts) {
+        edCount.textContent = `${window.edProducts.length} Products`;
+    }
 
-        if (count) {
-            count.textContent = `${window.edProducts.length} Products`;
-        }
+    const weightCount = document.getElementById("weightCount");
 
+    if (weightCount && window.weightProducts) {
+        weightCount.textContent = `${window.weightProducts.length} Products`;
     }
 
 });
