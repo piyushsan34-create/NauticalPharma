@@ -72,14 +72,14 @@ window.weightProducts = [
 }
 
 ];
-const products = window.weightProducts;
+const weightProducts = window.weightProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 
 // Populate Generic dropdown automatically
-const generics = [...new Set(products.map(product => product.generic))].sort();
+const generics = [...new Set(weightProducts.map(product => product.generic))].sort();
 
 generics.forEach(generic => {
 
@@ -91,7 +91,7 @@ generics.forEach(generic => {
 });
 
 // Populate manufacturer dropdown automatically
-const manufacturers = [...new Set(products.map(product => product.manufacturer))].sort();
+const manufacturers = [...new Set(weightProducts.map(product => product.manufacturer))].sort();
 
 manufacturers.forEach(company => {
 
@@ -103,13 +103,13 @@ manufacturers.forEach(company => {
 });
 const count = document.getElementById("productCount");
 
-function displayProducts(list){
+function displayweightProducts(list){
 
     const container = document.getElementById("productContainer");
 
     container.innerHTML = "";
 
-    count.textContent = `${list.length} Products Found`;
+    count.textContent = `${list.length} weightProducts Found`;
 
 const groups = {};
    
@@ -133,7 +133,7 @@ const groups = {};
 
                 <div class="accordion-title">
                     ${generic}
-                    <span class="count">(${groups[generic].length} Products)</span>
+                    <span class="count">(${groups[generic].length} weightProducts)</span>
                 </div>
 
                 <div class="accordion-icon">▼</div>
@@ -193,15 +193,15 @@ const groups = {};
         });
 
     });
-} // <-- closes displayProducts()
+} // <-- closes displayweightProducts()
 
-function filterProducts(){
+function filterweightProducts(){
 
     const keyword = search.value.toLowerCase().trim();
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = products.filter(product => {
+    const filtered = weightProducts.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -220,7 +220,7 @@ function filterProducts(){
 
     });
 
-    displayProducts(filtered);
+    displayweightProducts(filtered);
 
 }
 // ===============================
@@ -266,7 +266,7 @@ if (searchedProduct) {
     manufacturer.value = "";
     search.value = searchedProduct;
 
-    filterProducts();
+    filterweightProducts();
 
     setTimeout(() => {
 
@@ -308,9 +308,9 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayProducts(window.weightProducts);
+displayweightProducts(window.weightProducts);
 
-search.addEventListener("keyup", filterProducts);
-filter.addEventListener("change", filterProducts);
-manufacturer.addEventListener("change", filterProducts);
+search.addEventListener("keyup", filterweightProducts);
+filter.addEventListener("change", filterweightProducts);
+manufacturer.addEventListener("change", filterweightProducts);
 }
