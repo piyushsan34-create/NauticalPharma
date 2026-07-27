@@ -404,3 +404,19 @@ if (searchBox && searchResults) {
     searchResults.appendChild(item);
 
 });
+                   }
+
+        searchResults.style.display = "block";
+
+    });
+
+    // Hide results when clicking outside
+    document.addEventListener("click", function (e) {
+
+        if (!searchBox.contains(e.target) && !searchResults.contains(e.target)) {
+            searchResults.style.display = "none";
+        }
+
+    });
+
+}
