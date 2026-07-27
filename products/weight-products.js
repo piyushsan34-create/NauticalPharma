@@ -73,7 +73,7 @@ window.weightProducts = [
 
 ];
 const products = window.weightProducts;
-
+if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
@@ -313,3 +313,4 @@ displayProducts(window.weightProducts);
 search.addEventListener("keyup", filterProducts);
 filter.addEventListener("change", filterProducts);
 manufacturer.addEventListener("change", filterProducts);
+}
