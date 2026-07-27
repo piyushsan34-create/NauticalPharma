@@ -72,7 +72,7 @@ window.weightProducts = [
 }
 
 ];
-const weightProducts = window.weightProducts;
+const products = window.weightProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
@@ -91,7 +91,7 @@ generics.forEach(generic => {
 });
 
 // Populate manufacturer dropdown automatically
-const manufacturers = [...new Set(weightProducts.map(product => product.manufacturer))].sort();
+const manufacturers = [...new Set(products.map(product => product.manufacturer))].sort();
 
 manufacturers.forEach(company => {
 
@@ -201,7 +201,7 @@ function filterweightProducts(){
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = weightProducts.filter(product => {
+    const filtered = products.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -308,7 +308,7 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayweightProducts(weightProducts);
+displayweightProducts(products);
 
 search.addEventListener("keyup", filterweightProducts);
 filter.addEventListener("change", filterweightProducts);
