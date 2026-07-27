@@ -118,14 +118,14 @@ window.edProducts = [
 {name:"Silvitra",generic:"Sildenafil + Vardenafil",strength:"100 mg + 20 mg",packing:"10 x 10 Tablets",manufacturer:"Sunrise Remedies"},
 {name:"Tadacip",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"}
 ];
-const products = window.edProducts;
+const edProducts = window.edProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 
 // Populate Generic dropdown automatically
-const generics = [...new Set(products.map(product => product.generic))].sort();
+const generics = [...new Set(edProducts.map(product => product.generic))].sort();
 
 generics.forEach(generic => {
 
@@ -136,7 +136,7 @@ generics.forEach(generic => {
 
 });
 // Populate manufacturer dropdown automatically
-const manufacturers = [...new Set(products.map(product => product.manufacturer))].sort();
+const manufacturers = [...new Set(edProducts.map(product => product.manufacturer))].sort();
 
 manufacturers.forEach(company => {
 
@@ -148,13 +148,13 @@ manufacturers.forEach(company => {
 });
 const count = document.getElementById("productCount");
 
-function displayProducts(list){
+function displayedProducts(list){
 
     const container = document.getElementById("productContainer");
 
     container.innerHTML = "";
 
-    count.textContent = `${list.length} Products Found`;
+    count.textContent = `${list.length} edProducts Found`;
 
 const groups = {};
    
@@ -178,7 +178,7 @@ const groups = {};
 
                 <div class="accordion-title">
                     ${generic}
-                    <span class="count">(${groups[generic].length} Products)</span>
+                    <span class="count">(${groups[generic].length} edProducts)</span>
                 </div>
 
                 <div class="accordion-icon">▼</div>
@@ -238,15 +238,15 @@ const groups = {};
         });
 
     });
-} // <-- closes displayProducts()
+} // <-- closes displayedProducts()
 
-function filterProducts(){
+function filteredProducts(){
 
     const keyword = search.value.toLowerCase().trim();
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = products.filter(product => {
+    const filtered = edProducts.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -265,7 +265,7 @@ function filterProducts(){
 
     });
 
-    displayProducts(filtered);
+    displayedProducts(filtered);
 
 }
 // ===============================
@@ -311,7 +311,7 @@ if (searchedProduct) {
     manufacturer.value = "";
     search.value = searchedProduct;
 
-    filterProducts();
+    filteredProducts();
 
     setTimeout(() => {
 
@@ -353,9 +353,9 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayProducts(products);
+displayedProducts(edProducts);
 
-search.addEventListener("keyup", filterProducts);
-filter.addEventListener("change", filterProducts);
-manufacturer.addEventListener("change", filterProducts);
+search.addEventListener("keyup", filteredProducts);
+filter.addEventListener("change", filteredProducts);
+manufacturer.addEventListener("change", filteredProducts);
    }
