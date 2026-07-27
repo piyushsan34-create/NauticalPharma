@@ -392,19 +392,15 @@ if (searchBox && searchResults) {
 
             matches.forEach(product => {
 
-                searchResults.innerHTML += `
-                    <a href="${product.page}" class="result-item">
-                        <strong>${product.name}</strong><br>
-                        <small>${product.generic}</small>
-                    </a>
-                `;
+    const item = document.createElement("a");
+    item.href = product.page;
+    item.className = "result-item";
 
-            });
+    item.innerHTML = `
+        <strong>${product.name}</strong><br>
+        <small>${product.generic}</small>
+    `;
 
-        }
+    searchResults.appendChild(item);
 
-        searchResults.style.display = "block";
-
-    });
-
-}
+});
