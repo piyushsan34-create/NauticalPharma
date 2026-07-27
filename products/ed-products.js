@@ -119,7 +119,7 @@ window.edProducts = [
 {name:"Tadacip",generic:"Tadalafil",strength:"20 mg",packing:"10 x 10 Tablets",manufacturer:"Cipla"}
 ];
 const products = window.edProducts;
-
+if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
@@ -358,3 +358,4 @@ displayProducts(products);
 search.addEventListener("keyup", filterProducts);
 filter.addEventListener("change", filterProducts);
 manufacturer.addEventListener("change", filterProducts);
+   }
