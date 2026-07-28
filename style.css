@@ -1171,20 +1171,6 @@ footer a:hover{
     outline:none;
 }
 
-.search-results{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background:#fff;
-    border-radius:15px;
-    margin-top:10px;
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
-    overflow:hidden;
-    z-index:999;
-}
-
 .result-item{
     display:block;
     padding:15px 20px;
