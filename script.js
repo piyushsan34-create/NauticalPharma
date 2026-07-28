@@ -367,6 +367,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const searchBox = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
+if (searchResults) {
+    searchResults.tabIndex = 0;
+}
 
 if (searchBox && searchResults) {
 
