@@ -1051,21 +1051,23 @@ footer a:hover{
 }
 
 .search-results{
+    display:none;
     position:absolute;
     top:100%;
     left:0;
     width:100%;
     background:#fff;
     border-radius:15px;
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
     margin-top:10px;
-    display:none;
-    z-index:999;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    z-index:99999;
 
     max-height:400px;
     overflow-y:auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    overflow-x:hidden;
+
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
 }
 .search-item{
     display:block;
