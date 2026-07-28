@@ -420,14 +420,3 @@ if (searchBox && searchResults) {
     });
 
 }
-const results = document.getElementById("searchResults");
-
-if (results) {
-
-    results.addEventListener("wheel", function (e) {
-
-        e.stopPropagation();
-
-    }, { passive: true });
-
-}
