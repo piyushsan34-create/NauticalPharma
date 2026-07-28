@@ -410,6 +410,7 @@ if (searchBox && searchResults) {
                    }
 
         searchResults.style.display = "block";
+       searchResults.scrollTop = 0;
 
     });
 
