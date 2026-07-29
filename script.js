@@ -359,12 +359,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (weightCount && window.weightProducts) {
         weightCount.textContent = `${window.weightProducts.length} Products`;
     }
-   const hormoneCount = document.getElementById("hormoneCount");
+   const hormonesCount = document.getElementById("hormonesCount");
 
-if (hormoneCount && window.hormoneProducts) {
-    hormoneCount.textContent = `${window.hormoneProducts.length} Products`;
+if (hormonesCount && window.hormoneProducts) {
+    hormonesCount.textContent = `${window.hormoneProducts.length} Products`;
 }
-
 });
 /* ===========================
    GLOBAL PRODUCT SEARCH
