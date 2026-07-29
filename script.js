@@ -359,6 +359,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (weightCount && window.weightProducts) {
         weightCount.textContent = `${window.weightProducts.length} Products`;
     }
+   const hormoneCount = document.getElementById("hormoneCount");
+
+if (hormoneCount && window.hormoneProducts) {
+    hormoneCount.textContent = `${window.hormoneProducts.length} Products`;
+}
 
 });
 /* ===========================
