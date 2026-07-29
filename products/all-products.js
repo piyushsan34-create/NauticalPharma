@@ -24,6 +24,17 @@ if (window.weightProducts) {
     });
 }
 
+// Hormone Products
+if (window.hormoneProducts) {
+    window.hormoneProducts.forEach(product => {
+        allProducts.push({
+            category: "Hormones",
+            name: product.name,
+            generic: product.generic,
+            page: `products/Hormones.html?product=${encodeURIComponent(product.name)}`
+        });
+    });
+}
 window.allProducts = allProducts;
 
 console.log("Total products:", window.allProducts.length);
