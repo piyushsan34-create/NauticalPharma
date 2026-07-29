@@ -33,7 +33,7 @@ window.hormoneProducts = [
 }
 
 ];
-const products = window.hormoneProducts;
+const hormoneProducts = window.hormoneProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
@@ -162,7 +162,7 @@ function filterhormoneProducts(){
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = products.filter(product => {
+    const filtered = hormoneProducts.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -269,7 +269,7 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayhormoneProducts(products);
+displayhormoneProducts(hormoneProducts);
 
 search.addEventListener("keyup", filterhormoneProducts);
 filter.addEventListener("change", filterhormoneProducts);
