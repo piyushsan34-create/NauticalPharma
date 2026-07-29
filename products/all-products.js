@@ -31,7 +31,7 @@ if (window.hormoneProducts) {
             category: "Hormones",
             name: product.name,
             generic: product.generic,
-            page: `products/Hormones.html?product=${encodeURIComponent(product.name)}`
+            page: `products/hormones.html?product=${encodeURIComponent(product.name)}`
         });
     });
 }
