@@ -40,7 +40,7 @@ const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 
 // Populate Generic dropdown automatically
-const generics = [...new Set(hormoneProducts.map(product => product.generic))].sort();
+const generics = [...new Set(products.map(product => product.generic))].sort();
 
 generics.forEach(generic => {
 
