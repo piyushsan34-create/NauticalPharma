@@ -321,17 +321,19 @@ observer.observe(document.querySelector(".stats"));
 
 const stats = document.querySelector(".stats");
 
-const statObserver = new IntersectionObserver(entries=>{
+if (stats) {
 
-if(entries[0].isIntersecting){
+    const statObserver = new IntersectionObserver(entries => {
 
-stats.classList.add("show");
+        if (entries[0].isIntersecting) {
+            stats.classList.add("show");
+        }
+
+    });
+
+    statObserver.observe(stats);
 
 }
-
-});
-
-statObserver.observe(stats);
 /* ===========================
    MOBILE MENU
 =========================== */
