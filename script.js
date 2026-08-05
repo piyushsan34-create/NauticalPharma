@@ -316,7 +316,9 @@ const observer = new IntersectionObserver(entries => {
 
 });
 
-observer.observe(document.querySelector(".stats"));
+const statsSection = document.querySelector(".stats");  
+if (statsSection) {     
+   observer.observe(statsSection); }
 /* Scroll Animation */
 
 const stats = document.querySelector(".stats");
