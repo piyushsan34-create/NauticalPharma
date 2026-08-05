@@ -1,4 +1,4 @@
-window.hormoneProducts = [
+window.steroidProducts = [
 
 {
     name: "Hucog",
@@ -33,7 +33,7 @@ window.hormoneProducts = [
 }
 
 ];
-const hormoneProducts = window.hormoneProducts;
+const steroidProducts = window.steroidProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
@@ -64,13 +64,13 @@ manufacturers.forEach(company => {
 });
 const count = document.getElementById("productCount");
 
-function displayhormoneProducts(list){
+function displaySteroidProducts(list){
 
     const container = document.getElementById("productContainer");
 
     container.innerHTML = "";
 
-    count.textContent = `${list.length} hormoneProducts Found`;
+    count.textContent = `${list.length} Products Found`;
 
 const groups = {};
    
@@ -94,7 +94,7 @@ const groups = {};
 
                 <div class="accordion-title">
                     ${generic}
-                    <span class="count">(${groups[generic].length} hormoneProducts)</span>
+                    <span class="count">(${groups[generic].length} Products)</span>
                 </div>
 
                 <div class="accordion-icon">▼</div>
@@ -154,9 +154,9 @@ const groups = {};
         });
 
     });
-} // <-- closes displayhormoneProducts()
+} // <-- closes displaySteroidProducts()
 
-function filterhormoneProducts(){
+function filterSteroidProducts(){
 
     const keyword = search.value.toLowerCase().trim();
     const generic = filter.value.toLowerCase();
@@ -181,7 +181,7 @@ function filterhormoneProducts(){
 
     });
 
-    displayhormoneProducts(filtered);
+    displaySteroidProducts(filtered);
 
 }
 // ===============================
@@ -227,7 +227,7 @@ if (searchedProduct) {
     manufacturer.value = "";
     search.value = searchedProduct;
 
-    filterhormoneProducts();
+    filterSteroidProducts();
 
     setTimeout(() => {
 
@@ -269,9 +269,9 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayhormoneProducts(hormoneProducts);
+displaySteroidProducts(hormoneProducts);
 
-search.addEventListener("keyup", filterhormoneProducts);
-filter.addEventListener("change", filterhormoneProducts);
-manufacturer.addEventListener("change", filterhormoneProducts);
+search.addEventListener("keyup", filterSteroidProducts);
+filter.addEventListener("change", filterSteroidProducts);
+manufacturer.addEventListener("change", filterSteroidProducts);
 }
