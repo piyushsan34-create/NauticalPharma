@@ -39,3 +39,15 @@ window.allProducts = allProducts;
 
 console.log("Total products:", window.allProducts.length);
 console.log(window.allProducts);
+
+// Steroid Products
+if (window.steroidProducts) {
+    window.steroidProducts.forEach(product => {
+        allProducts.push({
+            category: "Steroids",
+            name: product.name,
+            generic: product.generic,
+            page: `products/steroids.html?product=${encodeURIComponent(product.name)}`
+        });
+    });
+}
