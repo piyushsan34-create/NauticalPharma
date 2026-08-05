@@ -40,7 +40,7 @@ const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 
 // Populate Generic dropdown automatically
-const generics = [...new Set(products.map(product => product.generic))].sort();
+const generics = [...new Set(hormoneProducts.map(product => product.generic))].sort();
 
 generics.forEach(generic => {
 
@@ -52,7 +52,7 @@ generics.forEach(generic => {
 });
 
 // Populate manufacturer dropdown automatically
-const manufacturers = [...new Set(products.map(product => product.manufacturer))].sort();
+const manufacturers = [...new Set(hormoneProducts.map(product => product.manufacturer))].sort();
 
 manufacturers.forEach(company => {
 
@@ -162,7 +162,7 @@ function filterhormoneProducts(){
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = products.filter(product => {
+    const filtered = hormoneProducts.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -269,7 +269,7 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displayhormoneProducts(products);
+displayhormoneProducts(hormoneProducts);
 
 search.addEventListener("keyup", filterhormoneProducts);
 filter.addEventListener("change", filterhormoneProducts);
