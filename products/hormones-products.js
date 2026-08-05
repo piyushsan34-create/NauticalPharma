@@ -33,7 +33,7 @@ window.hormoneProducts = [
 }
 
 ];
-const products = window.hormoneProducts;
+const hormoneProducts = window.hormoneProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
