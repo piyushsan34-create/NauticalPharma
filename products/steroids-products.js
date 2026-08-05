@@ -1,35 +1,77 @@
 window.steroidProducts = [
 
+window.steroidProducts = [
+
 {
-    name: "Hucog",
-    generic: "HCG Injection",
-    strength: "5000 IU",
-    packing: "Injection",
-    manufacturer: "Bharat Serums"
+    name: "Anavar",
+    generic: "Oxandrolone",
+    strength: "10mg",
+    packing: "Tablets",
+    manufacturer: "Nautical Pharma"
 },
 
 {
-    name: "Hucog",
-    generic: "HCG Injection",
-    strength: "10000 IU",
-    packing: "Injection",
-    manufacturer: "Bharat Serums"
+    name: "Androl",
+    generic: "Oxymetholone",
+    strength: "50mg",
+    packing: "Tablets",
+    manufacturer: "Nautical Pharma"
 },
 
 {
-    name: "Puretrig",
-    generic: "HCG Injection",
-    strength: "5000 IU",
-    packing: "Injection",
-    manufacturer: "German Remedies"
+    name: "Dianabol",
+    generic: "Methandienone",
+    strength: "10mg",
+    packing: "Tablets",
+    manufacturer: "Nautical Pharma"
 },
 
 {
-    name: "Eutrig",
-    generic: "HCG Injection",
-    strength: "10000 IU",
+    name: "Decabol",
+    generic: "Nandrolone Decanoate Injection",
+    strength: "250mg/ml",
     packing: "Injection",
-    manufacturer: "Sun Pharma"
+    manufacturer: "Nautical Pharma"
+},
+
+{
+    name: "Boldabol",
+    generic: "Boldenone Undecylenate Injection",
+    strength: "250mg/ml",
+    packing: "Injection",
+    manufacturer: "Nautical Pharma"
+},
+
+{
+    name: "Primobol",
+    generic: "Methenolone Enanthate Injection",
+    strength: "100mg/ml",
+    packing: "Injection",
+    manufacturer: "Nautical Pharma"
+},
+
+{
+    name: "Masteron",
+    generic: "Drostanolone Propionate Injection",
+    strength: "100mg/ml",
+    packing: "Injection",
+    manufacturer: "Nautical Pharma"
+},
+
+{
+    name: "Tren-A",
+    generic: "Trenbolone Acetate Injection",
+    strength: "100mg/ml",
+    packing: "Injection",
+    manufacturer: "Nautical Pharma"
+},
+
+{
+    name: "Trenbolon",
+    generic: "Trenbolone Enanthate Injection",
+    strength: "200mg/ml",
+    packing: "Injection",
+    manufacturer: "Nautical Pharma"
 }
 
 ];
