@@ -63,3 +63,39 @@ manufacturers.forEach(company => {
 
 });
   
+displayProducts(products);
+
+} // <-- End of initProducts()
+
+
+// ======================================
+// DISPLAY PRODUCTS
+// ======================================
+
+function displayProducts(list) {
+
+    container.innerHTML = "";
+
+    count.textContent = `${list.length} Products Found`;
+
+    list.forEach(product => {
+
+        container.innerHTML += `
+
+        <div class="product-card">
+
+            <h3>${product.name}</h3>
+
+            <p><strong>Strength:</strong> ${product.strength}</p>
+
+            <p><strong>Packing:</strong> ${product.packing}</p>
+
+            <p><strong>Manufacturer:</strong> ${product.manufacturer}</p>
+
+        </div>
+
+        `;
+
+    });
+
+}
