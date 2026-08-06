@@ -75,11 +75,9 @@ window.steroidProducts = [
 initProducts(window.steroidProducts);
 
 const steroidProducts = window.steroidProducts;
-/*
+
 if (document.getElementById("productContainer")) {
-    ...
 }
-*/
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
@@ -334,9 +332,9 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displaySteroidProducts(steroidProducts);
+//displaySteroidProducts(steroidProducts);
 
-search.addEventListener("keyup", filterSteroidProducts);
-filter.addEventListener("change", filterSteroidProducts);
-manufacturer.addEventListener("change", filterSteroidProducts);
+//search.addEventListener("keyup", filterSteroidProducts);
+//filter.addEventListener("change", filterSteroidProducts);
+//manufacturer.addEventListener("change", filterSteroidProducts);
 }
