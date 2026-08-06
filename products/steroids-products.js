@@ -1,7 +1,4 @@
 window.steroidProducts = [
-
-window.steroidProducts = [
-
 {
     name: "Anavar",
     generic: "Oxandrolone",
