@@ -72,6 +72,8 @@ window.steroidProducts = [
 }
 
 ];
+initProducts(window.steroidProducts);
+
 const steroidProducts = window.steroidProducts;
 if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
