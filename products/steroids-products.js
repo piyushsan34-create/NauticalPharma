@@ -77,29 +77,6 @@ const steroidProducts = window.steroidProducts;
 
 if (document.getElementById("productContainer")) {
 }
-// Populate Generic dropdown automatically
-const generics = [...new Set(steroidProducts.map(product => product.generic))].sort();
-
-generics.forEach(generic => {
-
-    const option = document.createElement("option");
-    option.value = generic;
-    option.textContent = generic;
-    filter.appendChild(option);
-
-});
-
-// Populate manufacturer dropdown automatically
-const manufacturers = [...new Set(steroidProducts.map(product => product.manufacturer))].sort();
-
-manufacturers.forEach(company => {
-
-    const option = document.createElement("option");
-    option.value = company;
-    option.textContent = company;
-    manufacturer.appendChild(option);
-
-});
 const count = document.getElementById("productCount");
 
 function displaySteroidProducts(list){
