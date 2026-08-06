@@ -82,7 +82,7 @@ const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
 
 // Populate Generic dropdown automatically
-const generics = [...new Set(hormoneProducts.map(product => product.generic))].sort();
+const generics = [...new Set(steroidProducts.map(product => product.generic))].sort();
 
 generics.forEach(generic => {
 
@@ -94,7 +94,7 @@ generics.forEach(generic => {
 });
 
 // Populate manufacturer dropdown automatically
-const manufacturers = [...new Set(hormoneProducts.map(product => product.manufacturer))].sort();
+const manufacturers = [...new Set(steroidProducts.map(product => product.manufacturer))].sort();
 
 manufacturers.forEach(company => {
 
