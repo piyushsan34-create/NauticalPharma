@@ -307,10 +307,4 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-//displaySteroidProducts(steroidProducts);
-
-//search.addEventListener("keyup", filterSteroidProducts);
-//filter.addEventListener("change", filterSteroidProducts);
-//manufacturer.addEventListener("change", filterSteroidProducts);
-}
 initProducts(window.steroidProducts);
