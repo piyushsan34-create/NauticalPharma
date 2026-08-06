@@ -371,6 +371,11 @@ document.addEventListener("DOMContentLoaded", () => {
 if (hormonesCount && window.hormoneProducts) {
     hormonesCount.textContent = `${window.hormoneProducts.length} Products`;
 }
+   const steroidCount = document.getElementById("steroidCount");
+
+if (steroidCount && window.steroidProducts) {
+    steroidCount.textContent = `${window.steroidProducts.length} Products`;
+}
 });
 /* ===========================
    GLOBAL PRODUCT SEARCH
