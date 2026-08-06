@@ -38,6 +38,26 @@ if (document.getElementById("productContainer")) {
 const search = document.getElementById("searchInput");
 const filter = document.getElementById("categoryFilter");
 const manufacturer = document.getElementById("manufacturerFilter");
+    // Safety checks
+if (!search) {
+    console.error("searchInput not found");
+    return;
+}
+
+if (!filter) {
+    console.error("categoryFilter not found");
+    return;
+}
+
+if (!manufacturer) {
+    console.error("manufacturerFilter not found");
+    return;
+}
+
+if (!container) {
+    console.error("productContainer not found");
+    return;
+}
 
 // Populate Generic dropdown automatically
 const generics = [...new Set(hormoneProducts.map(product => product.generic))].sort();
