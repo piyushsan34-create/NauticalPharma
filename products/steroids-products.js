@@ -72,7 +72,6 @@ window.steroidProducts = [
 }
 
 ];
-initProducts(window.steroidProducts);
 
 const steroidProducts = window.steroidProducts;
 
@@ -338,3 +337,4 @@ if (searchedProduct) {
 //filter.addEventListener("change", filterSteroidProducts);
 //manufacturer.addEventListener("change", filterSteroidProducts);
 }
+initProducts(window.steroidProducts);
