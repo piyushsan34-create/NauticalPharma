@@ -201,7 +201,7 @@ function filterSteroidProducts(){
     const generic = filter.value.toLowerCase();
     const company = manufacturer.value.toLowerCase();
 
-    const filtered = hormoneProducts.filter(product => {
+    const filtered = steroidProducts.filter(product => {
 
         const matchSearch =
             product.name.toLowerCase().includes(keyword) ||
@@ -308,7 +308,7 @@ if (searchedProduct) {
 // INITIALIZE PAGE
 // ===============================
 
-displaySteroidProducts(hormoneProducts);
+displaySteroidProducts(steroidProducts);
 
 search.addEventListener("keyup", filterSteroidProducts);
 filter.addEventListener("change", filterSteroidProducts);
